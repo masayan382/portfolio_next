@@ -6,6 +6,7 @@ import { styled } from "@mui/system"
 import { css } from "@mui/styled-engine"
 import { AppBar, Toolbar, Typography } from "@mui/material"
 import Footer from "../layouts/footer"
+import Header from "../layouts/header"
 
 const RedColor = css({
     color: "red",
@@ -26,8 +27,8 @@ const Home: NextPage = () => {
                 <meta name="Portfolio" content="made by T.M" />
                 <link rel="icon" href="/favicon.png" />
             </Head>
-
-            <AppBar position="static">
+            <Header />
+            {/* <AppBar position="static">
                 <Toolbar>
                     <Typography
                         variant="h6"
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
                         App Bar
                     </Typography>
                 </Toolbar>
-            </AppBar>
+            </AppBar> */}
 
             <div className={styles.container}>
                 <main className={styles.main}>
