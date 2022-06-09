@@ -13,10 +13,14 @@ const theme = {
     spacing: 8,
 }
 
-export default function header() {
+const transparent = css({
+    backgroundColor: "transparent",
+})
+
+function Header() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <div css={transparent}>
                 <Toolbar>
                     <span>
                         <Image src="/rogo.png" alt="" width={28} height={28} />
@@ -25,19 +29,16 @@ export default function header() {
                         variant="h4"
                         component="div"
                         sx={{ flexGrow: 1, m: 2 }}
+                        color="secondary"
                     >
                         Portfolio
                     </Typography>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                    >
-                        <MenuIcon />
+                    <IconButton edge="start" color="inherit" aria-label="menu">
+                        <MenuIcon sx={{ fontSize: 48 }} />
                     </IconButton>
                 </Toolbar>
-            </AppBar>
+            </div>
         </Box>
     )
 }
+export default Header
