@@ -20,9 +20,12 @@ function Copyright() {
     )
 }
 
-const footerArea = css({
+const footerAreaDetail = css({
     backgroundColor: "#000",
     textAlign: "center",
+    position: "absolute",
+    bottom: "0",
+    width: "100vw",
 })
 const whiteColor = css({
     color: "#fff",
@@ -30,22 +33,16 @@ const whiteColor = css({
 
 function Footer() {
     return (
-        <Box
-        // sx={{
-        //     display: "flex",
-        //     flexDirection: "column",
-        //     minHeight: "100vh",
-        // }}
-        >
+        <Box>
             <CssBaseline />
             <Box
                 component="footer"
                 sx={{
-                    py: 3,
+                    py: 2,
                     px: 2,
                     mt: "auto",
                 }}
-                css={footerArea}
+                css={footerAreaDetail}
             >
                 <Container maxWidth="sm">
                     <Copyright />

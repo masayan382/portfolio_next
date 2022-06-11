@@ -19,9 +19,16 @@ const Welcome = styled("span")({
     borderRadius: 4,
 })
 
+const contentArea = css({
+    minHeight: "100vh",
+    position: "relative",
+    paddingBottom: "60px",
+    boxSizing: "border-box",
+})
+
 const Home: NextPage = () => {
     return (
-        <>
+        <div css={contentArea}>
             <Head>
                 <title>Portfolio</title>
                 <meta name="Portfolio" content="made by T.M" />
@@ -89,7 +96,7 @@ const Home: NextPage = () => {
                 </main>
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 
