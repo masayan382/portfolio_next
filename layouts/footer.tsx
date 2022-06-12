@@ -11,7 +11,7 @@ function Copyright() {
     return (
         <Typography css={whiteColor}>
             <span>
-                <Image src="/rogo.png" alt="" width={14} height={14} />{" "}
+                <Image src="/logo.png" alt="" width={14} height={14} />{" "}
             </span>
             {"Copyright © "}
             Portfolio {new Date().getFullYear()}

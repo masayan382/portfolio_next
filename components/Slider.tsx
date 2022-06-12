@@ -5,7 +5,12 @@ import SwiperCore, { Pagination, Navigation } from "swiper" //使いたい機能
 
 SwiperCore.use([Pagination, Navigation])
 
-const images = ["/post.jpg", "/nurse.jpg", "/box.jpg"]
+const images = [
+    "/img/post.jpg",
+    "/img/box.jpg",
+    "/img/hands.jpg",
+    "/img/book.jpg",
+]
 
 const Slider: React.FC = () => {
     return (

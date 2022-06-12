@@ -13,17 +13,21 @@ const theme = {
     spacing: 8,
 }
 
-const transparent = css({
+const headerAreaDetail = css({
     backgroundColor: "transparent",
+    position: "absolute",
+    top: "0",
+    width: "100vw",
+    zIndex: "100",
 })
 
 function Header() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <div css={transparent}>
+        <Box sx={{ flexGrow: 1 }} css={headerAreaDetail}>
+            <div>
                 <Toolbar>
                     <span>
-                        <Image src="/rogo.png" alt="" width={28} height={28} />
+                        <Image src="/logo.png" alt="" width={28} height={28} />
                     </span>
                     <Typography
                         variant="h4"
