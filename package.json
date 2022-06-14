@@ -20,7 +20,10 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "swiper": "^8.2.3"
+    "react-tsparticles": "^2.0.6",
+    "swiper": "^8.2.3",
+    "tsparticles": "^2.0.6",
+    "tsparticles-engine": "^2.0.6"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.9.2",

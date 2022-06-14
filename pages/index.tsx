@@ -7,6 +7,7 @@ import { css } from "@mui/styled-engine"
 import { AppBar, Toolbar, Typography } from "@mui/material"
 import { Header, Footer, Top } from "../layouts/index"
 import { Cover, Slider } from "../components/index"
+import ParticlesBackground from "../components/ParticlesBackground"
 
 const RedColor = css({
     color: "red",
@@ -39,7 +40,8 @@ const Home: NextPage = () => {
 
             <div>
                 <main>
-                    <Top />
+                    <ParticlesBackground />
+                    {/* <Top /> */}
                     {/* <Slider /> */}
                 </main>
             </div>
