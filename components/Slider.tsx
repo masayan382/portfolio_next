@@ -1,9 +1,10 @@
 import React from "react"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
-import SwiperCore, { Pagination, Navigation } from "swiper" //使いたい機能をインポート
+import SwiperCore, { Pagination, Navigation, Mousewheel } from "swiper" //使いたい機能をインポート
+import "swiper/css"
 
-SwiperCore.use([Pagination, Navigation])
+SwiperCore.use([Pagination, Navigation, Mousewheel])
 
 const images = [
     "/img/post.jpg",
@@ -20,9 +21,10 @@ const Slider: React.FC = () => {
                 clickable: true,
             }} //　何枚目のスライドかを示すアイコン、スライドの下の方にある
             navigation //スライドを前後させるためのボタン、スライドの左右にある
-            loop={true}
+            loop={false}
+            mousewheel={true}
         >
-            {images.map((src: string, index: number) => {
+            {/* {images.map((src: string, index: number) => {
                 return (
                     <SwiperSlide key={`${index}`}>
                         <Image
@@ -34,7 +36,26 @@ const Slider: React.FC = () => {
                         />
                     </SwiperSlide>
                 )
-            })}
+            })} */}
+            <SwiperSlide>
+                <Image
+                    src={"/img/book.jpg"}
+                    layout="responsive"
+                    width={640}
+                    height={400}
+                    alt=""
+                />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Image
+                    src={"/img/box.jpg"}
+                    layout="responsive"
+                    width={640}
+                    height={400}
+                    alt=""
+                />
+            </SwiperSlide>
+            {/* <ParticlesBackground /> */}
         </Swiper>
     )
 }

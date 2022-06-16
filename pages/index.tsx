@@ -42,7 +42,7 @@ const Home: NextPage = () => {
                 <main>
                     <ParticlesBackground />
                     {/* <Top /> */}
-                    {/* <Slider /> */}
+                    <Slider />
                 </main>
             </div>
             <Footer />
