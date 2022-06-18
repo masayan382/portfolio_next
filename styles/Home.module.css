@@ -114,3 +114,15 @@
     flex-direction: column;
   }
 } */
+/* .swiper {
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    overflow: hidden !important;
+}
+.swiper-slide span {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+} */

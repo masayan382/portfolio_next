@@ -7,7 +7,7 @@ const viewCover = css({
     width: "50vw",
     height: "100vh",
     transform: "skew(-15deg)",
-    zIndex: "10",
+    zIndex: "1",
     "&::before": {
         content: '""',
         position: "absolute",

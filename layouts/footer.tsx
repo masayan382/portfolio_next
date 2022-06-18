@@ -26,6 +26,7 @@ const footerAreaDetail = css({
     position: "absolute",
     bottom: "0",
     width: "100vw",
+    zIndex: "100",
 })
 const whiteColor = css({
     color: "#fff",

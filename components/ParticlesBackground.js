@@ -10,8 +10,8 @@ const ParticlesBackground = () => {
     const bg = css({
         backgroundImage: "url('/img/bg.jpg')",
         position: "absolute",
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
         backgroundColor: "#323031",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

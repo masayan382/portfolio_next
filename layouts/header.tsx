@@ -37,7 +37,11 @@ function Header() {
                     >
                         Portfolio
                     </Typography>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
+                    <IconButton
+                        edge="start"
+                        color="secondary"
+                        aria-label="menu"
+                    >
                         <MenuIcon sx={{ fontSize: 48 }} />
                     </IconButton>
                 </Toolbar>

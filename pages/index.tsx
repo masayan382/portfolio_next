@@ -21,10 +21,7 @@ const Welcome = styled("span")({
 })
 
 const contentArea = css({
-    minHeight: "100vh",
     position: "relative",
-    paddingBottom: "60px",
-    boxSizing: "border-box",
 })
 
 const Home: NextPage = () => {
