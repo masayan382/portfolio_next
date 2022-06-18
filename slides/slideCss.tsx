@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@mui/styled-engine"
 
-const viewCover = css({
+export const viewCover = css({
     position: "absolute",
     backgroundColor: "#000",
     width: "50vw",
@@ -21,11 +21,11 @@ const viewCover = css({
     },
 })
 
-const Cover: React.FC = () => {
-    return (
-        <>
-            <div css={viewCover}>test</div>
-        </>
-    )
-}
-export default Cover
+// const Cover: React.FC = () => {
+//     return (
+//         <>
+//             <div css={viewCover}>test</div>
+//         </>
+//     )
+// }
+// export default Cover
