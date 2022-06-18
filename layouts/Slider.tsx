@@ -11,7 +11,7 @@ import SwiperCore, {
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
-import { Top, About, Works } from "../slides/index"
+import { Top, About, Works, Skills, Contact } from "../slides/index"
 
 SwiperCore.use([Pagination, Navigation, Mousewheel, EffectFade])
 
@@ -41,6 +41,12 @@ const Slider: React.FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <Works />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Skills />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Contact />
                 </SwiperSlide>
 
                 {/* <ParticlesBackground /> */}
