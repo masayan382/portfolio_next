@@ -1,16 +1,28 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
-import SwiperCore, { Pagination, Navigation, Mousewheel } from "swiper" //使いたい機能をインポート
+import { SwiperOptions } from "swiper"
+import SwiperCore, {
+    Pagination,
+    Navigation,
+    Mousewheel,
+    EffectFade,
+} from "swiper" //使いたい機能をインポート
 import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/effect-fade"
 import { Top, About } from "../slides/index"
 
-SwiperCore.use([Pagination, Navigation, Mousewheel])
+SwiperCore.use([Pagination, Navigation, Mousewheel, EffectFade])
 
 const Slider: React.FC = () => {
     return (
         <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
             <Swiper
+                effect={"fade"}
+                speed={200}
+                direction={"vertical"}
+                spaceBetween={0}
                 slidesPerView={1} //一度に表示するスライドの数
                 pagination={{
                     clickable: true,
@@ -18,6 +30,8 @@ const Slider: React.FC = () => {
                 navigation //スライドを前後させるためのボタン、スライドの左右にある
                 loop={false}
                 mousewheel={true}
+                modules={[Mousewheel, Pagination, EffectFade]}
+                className="mySwiper"
             >
                 <SwiperSlide>
                     <Top />
