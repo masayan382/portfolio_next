@@ -1,2 +1,6 @@
 export { default as Top } from "./Top.tsx"
+export { default as Works } from "./Works.tsx"
+export { default as Skills } from "./Skills.tsx"
+export { default as Contact } from "./Contact.tsx"
+export { default as About } from "./About.tsx"
 export { default as slideCss } from "./slideCss.tsx"

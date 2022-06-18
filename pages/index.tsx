@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             </Head>
             <Header />
             <main>
-                <ParticlesBackground />
+                {/* <ParticlesBackground /> */}
                 <Slider />
             </main>
             <Footer />

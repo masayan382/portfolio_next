@@ -3,16 +3,9 @@ import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import SwiperCore, { Pagination, Navigation, Mousewheel } from "swiper" //使いたい機能をインポート
 import "swiper/css"
-import { Top } from "../slides/index"
+import { Top, About } from "../slides/index"
 
 SwiperCore.use([Pagination, Navigation, Mousewheel])
-
-// const images = [
-//     "/img/post.jpg",
-//     "/img/box.jpg",
-//     "/img/hands.jpg",
-//     "/img/book.jpg",
-// ]
 
 const Slider: React.FC = () => {
     return (
@@ -26,31 +19,11 @@ const Slider: React.FC = () => {
                 loop={false}
                 mousewheel={true}
             >
-                {/* {images.map((src: string, index: number) => {
-                return (
-                    <SwiperSlide key={`${index}`}>
-                        <Image
-                            src={src}
-                            layout="responsive"
-                            width={640}
-                            height={400}
-                            alt=""
-                        />
-                    </SwiperSlide>
-                )
-            })} */}
                 <SwiperSlide>
                     <Top />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image
-                        src={"/img/book.jpg"}
-                        layout="responsive"
-                        objectFit="cover"
-                        width={640}
-                        height={400}
-                        alt=""
-                    />
+                    <About />
                 </SwiperSlide>
                 <SwiperSlide>
                     <Image
