@@ -34,7 +34,7 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "50%",
+    width: "40%",
     height: "auto",
     padding: "96px 96px",
     color: "#fff",
@@ -47,17 +47,17 @@ const About: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                             <div className={classes.paper}>
                                 <h2>ABOUT</h2>
                                 <p>
-                                    はじめまして。フロントエンドエンジニアのＴ・Ｍと申します。
+                                    私はIT化が遅れている医療現場で看護師として働く中、ITやWEBの力を使えばもっと効率的に、もっと効果的に業務が行えるのにと疑問や違和感を持つようになりました。
                                 </p>
                                 <p>
-                                    元々は看護師をしていましたが、IT化が遅れている医療現場で働くうちにWEBやITの力を使って医療をもっと身近なものにしたいと思うようになりウェブエンジニアに転身しました。
+                                    そして、「WEBやITの力を使って医療をもっと身近なものにしたい」と思い、ウェブエンジニアに転身しました。
                                 </p>
                                 <p>
-                                    今後は元看護師ウェブエンジニアという個性とキャリアを活かし、医療とWEBの力をかけ合わせた「ヘルステック関連」のサービスやWEBサイト制作、アプリ開発を行いたいと考えています。
+                                    現在は元看護師ウェブエンジニアという個性とキャリアを活かし、「ヘルステック関連」のサービスやWEBサイト制作に就くべく日々勉強しております。
                                 </p>
                             </div>
                         </Grid>
