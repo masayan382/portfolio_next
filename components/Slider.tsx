@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import SwiperCore, { Pagination, Navigation, Mousewheel } from "swiper" //使いたい機能をインポート
 import "swiper/css"
-import Top from "../layouts/Top"
+import { Top } from "./index"
 
 SwiperCore.use([Pagination, Navigation, Mousewheel])
 

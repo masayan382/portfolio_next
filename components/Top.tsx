@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import Cover from "../components/Cover"
+import Cover from "./Cover"
 
 const Top: React.FC = () => {
     return (
