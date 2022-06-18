@@ -11,7 +11,7 @@ import SwiperCore, {
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
-import { Top, About } from "../slides/index"
+import { Top, About, Works } from "../slides/index"
 
 SwiperCore.use([Pagination, Navigation, Mousewheel, EffectFade])
 
@@ -20,7 +20,7 @@ const Slider: React.FC = () => {
         <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
             <Swiper
                 effect={"fade"}
-                speed={200}
+                speed={500}
                 direction={"vertical"}
                 spaceBetween={0}
                 slidesPerView={1} //一度に表示するスライドの数
@@ -40,15 +40,9 @@ const Slider: React.FC = () => {
                     <About />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image
-                        src={"/img/box.jpg"}
-                        layout="responsive"
-                        objectFit="cover"
-                        width={640}
-                        height={400}
-                        alt=""
-                    />
+                    <Works />
                 </SwiperSlide>
+
                 {/* <ParticlesBackground /> */}
             </Swiper>
         </div>

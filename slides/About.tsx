@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme: Theme) =>
         root: {
             flexGrow: 1,
         },
-        paper: {
-            padding: theme.spacing(1),
-        },
     })
 )
 
@@ -48,7 +45,7 @@ const About: React.FC = () => {
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
                         <Grid item xs={10}>
-                            <div className={classes.paper}>
+                            <div>
                                 <h2>ABOUT</h2>
                                 <p>
                                     私はIT化が遅れている医療現場で看護師として働く中、ITやWEBの力を使えばもっと効率的に、もっと効果的に業務が行えるのにと疑問や違和感を持つようになりました。
