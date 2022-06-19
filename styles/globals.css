@@ -32,3 +32,34 @@ main .swiper {
     object-fit: cover;
     overflow: hidden;
 }
+
+main .swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+    left: 10px;
+    right: auto;
+    top: 50%;
+    /* transform: translate3d(0px, -50%, 0); */
+}
+main
+    .swiper-pagination-vertical.swiper-pagination-bullets
+    .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
+    display: block;
+    background-color: #bbb4b4;
+}
+
+main .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #fff;
+    width: 24px;
+}
+main .swiper-pagination-bullet {
+    width: 16px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 0;
+    background: #333;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
