@@ -12,10 +12,13 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 import { Top, About, Works, Skills, Contact } from "../slides/index"
+import { AnyRecord } from "dns"
 
 SwiperCore.use([Pagination, Navigation, Mousewheel, EffectFade])
 
 const Slider: React.FC = () => {
+    const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
+    const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
     return (
         <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
             <Swiper
@@ -26,8 +29,8 @@ const Slider: React.FC = () => {
                 slidesPerView={1} //一度に表示するスライドの数
                 pagination={{
                     clickable: true,
-                }} //　何枚目のスライドかを示すアイコン、スライドの下の方にある
-                navigation //スライドを前後させるためのボタン、スライドの左右にある
+                }}
+                navigation={{ prevEl, nextEl }}
                 loop={false}
                 mousewheel={true}
                 modules={[Mousewheel, Pagination, EffectFade]}
@@ -48,9 +51,9 @@ const Slider: React.FC = () => {
                 <SwiperSlide>
                     <Contact />
                 </SwiperSlide>
-
-                {/* <ParticlesBackground /> */}
             </Swiper>
+            <div ref={(node) => setPrevEl(node)}>prev</div>
+            <div ref={(node) => setNextEl(node)}>next</div>
         </div>
     )
 }
