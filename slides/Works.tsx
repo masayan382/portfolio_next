@@ -52,7 +52,7 @@ const Works: React.FC = () => {
                                     <li>Web Design</li>
                                     <li>Front-end</li>
                                     <li>Back-end</li>
-                                    <li>SEO,Monetize</li>
+                                    <li>SEO, Monetize</li>
                                     ... and more
                                 </ul>
                             </div>

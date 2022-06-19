@@ -6,7 +6,7 @@ import { stepClasses } from "@mui/material"
 
 const topContent = css({
     position: "absolute",
-    top: "49%",
+    top: "calc(50% - 56px)",
     left: "50%",
     transform: "translateY(-49%) translateX(-50%)",
     color: "#fff",
@@ -17,7 +17,7 @@ const topContent = css({
 
 const title = css({
     margin: "50px auto 40px",
-    fontSize: "3.5rem",
+    fontSize: "clamp(1.8rem,5vw,3.5rem)",
     lineHeight: "1.5",
     width: "18ch",
     overflow: "hidden",
@@ -42,24 +42,26 @@ const animation = css`
 const titleSub = css({
     margin: " 0 0 30px",
     letterSpacing: "1px",
-    fontSize: "1.2rem",
+    fontSize: "clamp(0.75rem,5vw,1.2rem)",
     "&::before": {
         display: "inline-block",
         margin: "0 30px",
-        width: "50px",
+        width: "72px",
         height: "2px",
         backgroundColor: "#fff",
         content: '""',
         verticalAlign: "middle",
+        textShadow: "1px 0 5px black",
     },
     "&::after": {
         display: "inline-block",
         margin: "0 30px",
-        width: "50px",
+        width: "72px",
         height: "2px",
         backgroundColor: "#fff",
         content: '""',
         verticalAlign: "middle",
+        textShadow: "1px 0 5px black",
     },
 })
 
