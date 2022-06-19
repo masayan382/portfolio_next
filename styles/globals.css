@@ -63,3 +63,121 @@ main .swiper-pagination-bullet {
     opacity: 0.2;
     transition: all 0.5s;
 }
+
+.prevBtn {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    top: 64px;
+    left: 4%;
+    animation: arrowUp 1s ease-in-out infinite 1s;
+}
+.nextBtn {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    bottom: 56px;
+    left: 4%;
+    animation: arrowDown 1s ease-in-out infinite 1s;
+}
+
+.prevBtn.swiper-button-disabled {
+    visibility: hidden;
+}
+.nextBtn.swiper-button-disabled {
+    visibility: hidden;
+}
+/* scroll down */
+@keyframes arrowDown {
+    0% {
+        bottom: 60px;
+    }
+    50% {
+        bottom: 72px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}
+
+/*Scrollテキストの描写*/
+.nextBtn span {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    height: 66px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.nextBtn:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(-31deg);
+}
+
+.nextBtn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 50px;
+    background: #eee;
+}
+/* scroll up */
+@keyframes arrowUp {
+    0% {
+        top: 70px;
+    }
+    50% {
+        top: 82px;
+    }
+    100% {
+        top: 70px;
+    }
+}
+
+/*Scrollテキストの描写*/
+.prevBtn span {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 50px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.prevBtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(31deg);
+}
+
+.prevBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 50px;
+    background: #eee;
+}

@@ -52,8 +52,12 @@ const Slider: React.FC = () => {
                     <Contact />
                 </SwiperSlide>
             </Swiper>
-            <div ref={(node) => setPrevEl(node)}>prev</div>
-            <div ref={(node) => setNextEl(node)}>next</div>
+            <div className="prevBtn" ref={(node) => setPrevEl(node)}>
+                <span>Scroll Up</span>
+            </div>
+            <div className="nextBtn" ref={(node) => setNextEl(node)}>
+                <span>Scroll Down</span>
+            </div>
         </div>
     )
 }
