@@ -34,7 +34,7 @@ const Slider: React.FC = () => {
                 loop={false}
                 mousewheel={true}
                 modules={[Mousewheel, Pagination, EffectFade]}
-                className="mySwiper"
+                className="topSwiper"
             >
                 <SwiperSlide>
                     <Top />

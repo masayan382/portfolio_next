@@ -4,6 +4,12 @@ import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
+import { Barman, Necombo, Travel } from "../components/workSlides/index"
+import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
+import { SwiperOptions } from "swiper"
+import SwiperCore, { Pagination } from "swiper" //使いたい機能をインポート
+import "swiper/css"
+import "swiper/css/pagination"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -32,11 +38,14 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "40%",
-    height: "auto",
+    width: "80%",
+    height: "80%",
     padding: "96px 96px",
+    margin: "0 auto",
     color: "#fff",
 })
+
+SwiperCore.use([Pagination])
 
 const Works: React.FC = () => {
     const classes = useStyles()
@@ -45,9 +54,30 @@ const Works: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={10}>
-                            <div>
+                        <Grid item xs={12}>
+                            <div className="worksPage">
                                 <h2>Works</h2>
+                                <div>
+                                    <Swiper
+                                        modules={[Pagination]}
+                                        spaceBetween={20}
+                                        slidesPerView={3}
+                                        navigation={false}
+                                        pagination={{ clickable: true }}
+                                        scrollbar={{ draggable: true }}
+                                        className="workSwiper"
+                                    >
+                                        <SwiperSlide>
+                                            <Barman />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Necombo />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Travel />
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
                             </div>
                         </Grid>
                     </Grid>
