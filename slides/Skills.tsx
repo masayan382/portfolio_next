@@ -48,9 +48,13 @@ const Skills: React.FC = () => {
                         <Grid item xs={10}>
                             <div>
                                 <h2>Skills</h2>
-                                <p>
-                                    私はIT化が遅れている医療現場で看護師として働く中、ITやWEBの力を使えばもっと効率的に、もっと効果的に業務が行えるのにと疑問や違和感を持つようになりました。
-                                </p>
+                                <ul>
+                                    <li>Web Design</li>
+                                    <li>Front-end</li>
+                                    <li>Back-end</li>
+                                    <li>SEO, Monetize</li>
+                                    ... and more
+                                </ul>
                             </div>
                         </Grid>
                     </Grid>

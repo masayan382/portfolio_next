@@ -48,13 +48,6 @@ const Works: React.FC = () => {
                         <Grid item xs={10}>
                             <div>
                                 <h2>Works</h2>
-                                <ul>
-                                    <li>Web Design</li>
-                                    <li>Front-end</li>
-                                    <li>Back-end</li>
-                                    <li>SEO, Monetize</li>
-                                    ... and more
-                                </ul>
                             </div>
                         </Grid>
                     </Grid>

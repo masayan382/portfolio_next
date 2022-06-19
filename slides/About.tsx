@@ -36,6 +36,7 @@ const sliderContainer = css({
     padding: "96px 96px",
     color: "#fff",
     letterSpacing: "0.1",
+    textShadow: "1px 0 5px black",
 })
 
 const About: React.FC = () => {
