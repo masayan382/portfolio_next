@@ -42,7 +42,7 @@ const Barman: React.FC = () => {
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
+                        1
                     </Avatar>
                 }
                 action={

@@ -42,7 +42,7 @@ const Travel: React.FC = () => {
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
+                        3
                     </Avatar>
                 }
                 action={

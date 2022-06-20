@@ -7,8 +7,9 @@ import Grid from "@material-ui/core/Grid"
 import { Barman, Necombo, Travel } from "../components/workSlides/index"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import { SwiperOptions } from "swiper"
-import SwiperCore, { Pagination } from "swiper" //使いたい機能をインポート
+import SwiperCore, { Pagination, Autoplay } from "swiper" //使いたい機能をインポート
 import "swiper/css"
+import "swiper/css/autoplay"
 import "swiper/css/pagination"
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -45,7 +46,7 @@ const sliderContainer = css({
     color: "#fff",
 })
 
-SwiperCore.use([Pagination])
+SwiperCore.use([Pagination, Autoplay])
 
 const Works: React.FC = () => {
     const classes = useStyles()
@@ -62,11 +63,25 @@ const Works: React.FC = () => {
                                         modules={[Pagination]}
                                         spaceBetween={20}
                                         slidesPerView={3}
-                                        navigation={false}
+                                        autoplay={{
+                                            delay: 5000,
+                                            disableOnInteraction: true,
+                                        }}
+                                        navigation={true}
                                         pagination={{ clickable: true }}
-                                        scrollbar={{ draggable: true }}
+                                        loop={true}
+                                        // scrollbar={{ draggable: true }}
                                         className="workSwiper"
                                     >
+                                        <SwiperSlide>
+                                            <Barman />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Necombo />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Travel />
+                                        </SwiperSlide>
                                         <SwiperSlide>
                                             <Barman />
                                         </SwiperSlide>
