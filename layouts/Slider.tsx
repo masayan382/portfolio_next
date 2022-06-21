@@ -20,7 +20,10 @@ const Slider: React.FC = () => {
     const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
     const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
     return (
-        <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
+        <div
+            style={{ position: "relative", width: "100vw", height: "100vh" }}
+            className="topSwiper"
+        >
             <Swiper
                 effect={"fade"}
                 speed={500}
@@ -34,7 +37,6 @@ const Slider: React.FC = () => {
                 loop={false}
                 mousewheel={true}
                 modules={[Mousewheel, Pagination, EffectFade]}
-                className="topSwiper"
             >
                 <SwiperSlide>
                     <Top />

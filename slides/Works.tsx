@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid"
 import { Barman, Necombo, Travel } from "../components/workSlides/index"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import { SwiperOptions } from "swiper"
-import SwiperCore, { Pagination, Autoplay } from "swiper" //使いたい機能をインポート
+import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper" //使いたい機能をインポート
 import "swiper/css"
 import "swiper/css/autoplay"
 import "swiper/css/pagination"
@@ -39,14 +39,19 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "100%",
     padding: "96px 96px",
     margin: "0 auto",
     color: "#fff",
 })
+const workArea = css({
+    width: "88%",
+    height: "100%",
+})
 
-SwiperCore.use([Pagination, Autoplay])
+// SwiperCore.use([Pagination, Autoplay, Navigation])
+SwiperCore.use([Pagination, Navigation])
 
 const Works: React.FC = () => {
     const classes = useStyles()
@@ -55,24 +60,31 @@ const Works: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={12}>
-                            <div className="worksPage">
+                        <Grid item xs={10}>
+                            <div>
                                 <h2>Works</h2>
+                            </div>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={1}>
+                        <Grid item xs={12}>
+                            <div className="worksPage" css={workArea}>
                                 <div>
                                     <Swiper
-                                        modules={[Pagination]}
+                                        modules={[Pagination, Navigation]}
                                         spaceBetween={20}
                                         slidesPerView={3}
-                                        autoplay={{
-                                            delay: 5000,
-                                            disableOnInteraction: true,
-                                        }}
+                                        // autoplay={{
+                                        //     delay: 5000,
+                                        //     disableOnInteraction: true,
+                                        // }}
                                         navigation={true}
                                         pagination={{ clickable: true }}
                                         loop={true}
-                                        // scrollbar={{ draggable: true }}
+                                        scrollbar={{ draggable: true }}
                                         className="workSwiper"
                                     >
+                                         
                                         <SwiperSlide>
                                             <Barman />
                                         </SwiperSlide>

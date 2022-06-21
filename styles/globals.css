@@ -18,32 +18,31 @@ p {
     textshadow: "1px 0 5px black";
 }
 
-main .swiper {
+.topSwiper .swiper {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     overflow: hidden;
 }
 
-.swiper-container {
+.topSwiper .swiper-container {
     height: 100vh;
     overflow: hidden;
 }
-.swiper-wrapper .swiper-slide span {
+.topSwiper .swiper-wrapper .swiper-slide span {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     overflow: hidden;
 }
 
-main .swiper-pagination-vertical.swiper-pagination-bullets,
+.topSwiper .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical > .swiper-pagination-bullets {
     left: 10px;
     right: auto;
     top: 50%;
-    /* transform: translate3d(0px, -50%, 0); */
 }
-main
+.topSwiper
     .swiper-pagination-vertical.swiper-pagination-bullets
     .swiper-pagination-bullet,
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -52,12 +51,12 @@ main
     background-color: #bbb4b4;
 }
 
-main .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.topSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
     background-color: #fff;
     width: 24px;
 }
-main .swiper-pagination-bullet {
+.topSwiper .swiper-pagination-bullet {
     width: 16px;
     height: 4px;
     display: inline-block;
@@ -220,4 +219,14 @@ main .worksPage .swiper {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.worksPage .swiper-wrapper .swiper-slide span {
+    width: 16px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 0;
+    background: #333;
+    opacity: 0.2;
+    transition: all 0.5s;
 }
