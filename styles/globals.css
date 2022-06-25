@@ -223,6 +223,8 @@ main .worksPage .swiper {
 
 .worksPage .swiper-slide {
     pointer-events: auto !important;
+    display: flex;
+    justify-content: center;
 }
 
 .worksPage .swiper-horizontal > .swiper-pagination-bullets,
@@ -236,7 +238,7 @@ main .worksPage .swiper {
 
 .worksPage .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
-    background-color: #007aff;
+    background-color: #333;
     width: 8px;
     height: 8px;
     transform: scale(1.4);
@@ -263,9 +265,14 @@ main .worksPage .swiper {
 
 .worksPage .swiper-button-next,
 .worksPage .swiper-button-prev {
-    color: #333;
+    color: #fadb40;
+    width: 32px;
+    height: 32px;
+    background: #333;
+    border-radius: 50%;
 }
 .worksPage .swiper-button-next:after,
 .worksPage .swiper-button-prev:after {
     font-weight: bold;
+    font-size: 16px !important;
 }

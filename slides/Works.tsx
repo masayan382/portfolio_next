@@ -61,9 +61,7 @@ const Works: React.FC = () => {
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
                         <Grid item xs={10}>
-                            <div>
-                                <h2>Works</h2>
-                            </div>
+                            <h2>Works</h2>
                         </Grid>
                     </Grid>
                     <Grid container spacing={1}>
@@ -72,7 +70,7 @@ const Works: React.FC = () => {
                                 <div>
                                     <Swiper
                                         modules={[Pagination, Navigation]}
-                                        spaceBetween={20}
+                                        spaceBetween={24}
                                         slidesPerView={3}
                                         // autoplay={{
                                         //     delay: 5000,
