@@ -225,6 +225,7 @@ main .worksPage .swiper {
     pointer-events: auto !important;
     display: flex;
     justify-content: center;
+    height: 465px;
 }
 
 .worksPage .swiper-horizontal > .swiper-pagination-bullets,
