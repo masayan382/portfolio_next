@@ -230,3 +230,7 @@ main .worksPage .swiper {
     opacity: 0.2;
     transition: all 0.5s;
 }
+
+.worksPage .swiper-slide {
+    pointer-events: auto !importa;
+}
