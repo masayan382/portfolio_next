@@ -29,12 +29,12 @@ p {
     height: 100vh;
     overflow: hidden;
 }
-.topSwiper .swiper-wrapper .swiper-slide span {
+/* .topSwiper .swiper-wrapper .swiper-slide span {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     overflow: hidden;
-}
+} */
 
 .topSwiper .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical > .swiper-pagination-bullets {
@@ -42,6 +42,7 @@ p {
     right: auto;
     top: 50%;
 }
+
 .topSwiper
     .swiper-pagination-vertical.swiper-pagination-bullets
     .swiper-pagination-bullet,
@@ -184,18 +185,17 @@ p {
     background: #eee;
 }
 /*workSwiper */
-main .worksPage .workSwiper.swiper span {
+/* main .worksPage .workSwiper.swiper span {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    /* overflow: hidden; */
     list-style: none;
     padding: 0;
     z-index: 1;
     width: 100%;
     max-width: 345px;
     height: auto;
-}
+} */
 .MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root {
     background-color: #fff;
     color: rgba(0, 0, 0, 0.87);
@@ -221,16 +221,51 @@ main .worksPage .swiper {
     align-items: center;
 }
 
-.worksPage .swiper-wrapper .swiper-slide span {
-    width: 16px;
-    height: 4px;
+.worksPage .swiper-slide {
+    pointer-events: auto !important;
+}
+
+.worksPage .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+}
+
+.worksPage .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #007aff;
+    width: 8px;
+    height: 8px;
+    transform: scale(1.4);
+}
+
+.worksPage .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
     display: inline-block;
-    border-radius: 0;
+    border-radius: 50%;
     background: #333;
     opacity: 0.2;
     transition: all 0.5s;
 }
 
-.worksPage .swiper-slide {
-    pointer-events: auto !important;
+.worksPage
+    .swiper-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 6px;
+}
+
+.worksPage .swiper-button-next,
+.worksPage .swiper-button-prev {
+    color: #333;
+}
+.worksPage .swiper-button-next:after,
+.worksPage .swiper-button-prev:after {
+    font-weight: bold;
 }

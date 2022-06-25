@@ -81,7 +81,7 @@ const Works: React.FC = () => {
                                         navigation={true}
                                         pagination={{ clickable: true }}
                                         loop={true}
-                                        scrollbar={{ draggable: true }}
+                                        // scrollbar={{ draggable: false }}
                                         className="workSwiper"
                                     >
                                          
