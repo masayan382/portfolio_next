@@ -232,5 +232,5 @@ main .worksPage .swiper {
 }
 
 .worksPage .swiper-slide {
-    pointer-events: auto !importa;
+    pointer-events: auto !important;
 }
