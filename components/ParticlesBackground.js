@@ -17,15 +17,11 @@ const ParticlesBackground = () => {
         backgroundSize: "cover",
     })
 
-    const particlesLoaded = (container) => {
-        console.log(container)
-    }
     return (
         <Particles
             css={bg}
             id="tsparticles"
             init={particlesInit}
-            loaded={particlesLoaded}
             options={{
                 fpsLimit: 60,
                 particles: {

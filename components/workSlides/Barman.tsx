@@ -5,8 +5,7 @@ import CardMedia from "@mui/material/CardMedia"
 import CardContent from "@mui/material/CardContent"
 import CardActions from "@mui/material/CardActions"
 import IconButton, { IconButtonProps } from "@mui/material/IconButton"
-import Typography from "@mui/material/Typography"
-import OpenInBrowserIcon from "@mui/icons-material/OpenInBrowser"
+import WebIcon from "@mui/icons-material/Web"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import { css } from "@mui/styled-engine"
 
@@ -16,7 +15,14 @@ const cardTable = css({
         width: "30px",
         whiteSpace: "nowrap",
         textAlign: "left",
+        verticalAlign: "top",
         paddingRight: "8px",
+        fontSize: "12px",
+        fontWeight: "normal",
+    },
+    "tr > td": {
+        fontSize: "12px",
+        verticalAlign: "top",
     },
 })
 
@@ -31,8 +37,9 @@ const Barman: React.FC = () => {
                 alt="barman"
             />
             <CardContent style={{ padding: "4px 16px" }}>
-                <Typography variant="body2" color="text.secondary">
-                    <table css={cardTable}>
+                <table css={cardTable}>
+                    <thead></thead>
+                    <tbody>
                         <tr>
                             <th>概要</th>
                             <td>
@@ -47,12 +54,12 @@ const Barman: React.FC = () => {
                             <th>使用技術</th>
                             <td>HTML、CSS、SCSS、javascript、jQuery</td>
                         </tr>
-                    </table>
-                </Typography>
+                    </tbody>
+                </table>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="site">
-                    <OpenInBrowserIcon />
+                    <WebIcon />
                 </IconButton>
                 <IconButton aria-label="github">
                     <GitHubIcon />
