@@ -4,7 +4,22 @@ import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
-import { Barman, Necombo, Travel } from "../components/workSlides/index"
+import {
+    Barman,
+    Necombo,
+    Travel,
+    Sengoku,
+    Necord,
+    WeatherBudda,
+    BbsVue,
+    Tokugawa,
+    Chatbot,
+    Monoqlo,
+    Reactter,
+    HooksCalendar,
+    Lamall,
+    TodoNext,
+} from "../components/workSlides/index"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import { SwiperOptions } from "swiper"
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper" //使いたい機能をインポート
@@ -50,8 +65,7 @@ const workArea = css({
     height: "100%",
 })
 
-// SwiperCore.use([Pagination, Autoplay, Navigation])
-SwiperCore.use([Pagination, Navigation])
+SwiperCore.use([Pagination, Autoplay, Navigation])
 
 const Works: React.FC = () => {
     const classes = useStyles()
@@ -73,13 +87,13 @@ const Works: React.FC = () => {
                                         spaceBetween={24}
                                         slidesPerView={3}
                                         // autoplay={{
-                                        //     delay: 5000,
+                                        //     delay: 3000,
                                         //     disableOnInteraction: true,
                                         // }}
                                         navigation={true}
                                         pagination={{ clickable: true }}
                                         loop={true}
-                                        // scrollbar={{ draggable: false }}
+                                        // scrollbar={{ draggable: true }}
                                         className="workSwiper"
                                     >
                                          
@@ -100,6 +114,39 @@ const Works: React.FC = () => {
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <Travel />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Sengoku />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Necord />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <WeatherBudda />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <BbsVue />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Tokugawa />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Chatbot />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Monoqlo />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Reactter />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <HooksCalendar />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <Lamall />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <TodoNext />
                                         </SwiperSlide>
                                     </Swiper>
                                 </div>

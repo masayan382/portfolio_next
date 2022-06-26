@@ -31,7 +31,7 @@ const cardTable = css({
 
 const Barman: React.FC = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, height: 465 }}>
             <CardHeader title="Barman" />
             <CardMedia
                 component="img"

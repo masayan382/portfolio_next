@@ -206,12 +206,12 @@ p {
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
     overflow: auto;
     max-width: 345px;
-    height: 440px;
+    height: 470px;
 }
 main .worksPage .swiper {
     position: relative;
     width: 88%;
-    height: 100%;
+    height: 500px;
     z-index: 10;
     display: flex;
     transition-property: transform;
@@ -225,21 +225,21 @@ main .worksPage .swiper {
     pointer-events: auto !important;
     display: flex;
     justify-content: center;
-    height: 465px;
+    height: 470px;
 }
 
 .worksPage .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: 0px;
+    bottom: -4px;
     left: 0;
     width: 100%;
 }
 
 .worksPage .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
-    background-color: #333;
+    background-color: #fadb40;
     width: 8px;
     height: 8px;
     transform: scale(1.4);
@@ -271,6 +271,8 @@ main .worksPage .swiper {
     height: 32px;
     background: #333;
     border-radius: 50%;
+    border: 3px solid white;
+    opacity: 0.7;
 }
 .worksPage .swiper-button-next:after,
 .worksPage .swiper-button-prev:after {
