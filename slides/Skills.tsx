@@ -4,7 +4,16 @@ import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
-import { Html } from "../components/skillCircles/index"
+import {
+    Html,
+    Css,
+    Php,
+    Javascript,
+    Wordpress,
+    ReactJs,
+    Design,
+    Vue,
+} from "../components/skillCircles/index"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -33,10 +42,16 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "40%",
-    height: "auto",
+    width: "100%",
+    height: "100%",
     padding: "96px 96px",
+    margin: "0 auto",
     color: "#fff",
+})
+
+const circleArea = css({
+    width: "100%",
+    display: "flex",
 })
 
 const Skills: React.FC = () => {
@@ -46,18 +61,29 @@ const Skills: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={10}>
-                            <div>
-                                <h2>Skills</h2>
-                                <ul>
-                                    <li>Web Design</li>
-                                    <li>Front-end</li>
-                                    <li>Back-end</li>
-                                    <li>SEO, Monetize</li>
-                                    ... and more
-                                </ul>
+                        <Grid item xs={12}>
+                            <div css={circleArea}>
+                                <div>
+                                    <h2>Skills</h2>
+                                    <ul>
+                                        <li>Web Design</li>
+                                        <li>Front-end</li>
+                                        <li>Back-end</li>
+                                        <li>SEO, Monetize</li>
+                                        ... and more
+                                    </ul>
+                                </div>
+                                <div>
+                                    <Html />
+                                    <Css />
+                                    <Php />
+                                    <Javascript />
+                                    <Wordpress />
+                                    <Vue />
+                                    <ReactJs />
+                                    <Design />
+                                </div>
                             </div>
-                            <Html />
                         </Grid>
                     </Grid>
                 </div>

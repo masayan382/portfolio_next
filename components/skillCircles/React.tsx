@@ -2,21 +2,21 @@ import React from "react"
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 
-const Html: React.FC = () => {
-    const percentage: any = 80
+const ReactJs: React.FC = () => {
+    const percentage: any = 70
     return (
         <div style={{ width: 160, height: 160 }}>
             <CircularProgressbar
                 value={percentage}
-                text="HTML"
+                text="React.js/Next.js"
                 styles={buildStyles({
                     strokeLinecap: "butt",
-                    textColor: "#F56310",
-                    pathColor: "#F56310",
+                    textColor: "#4DD8FF",
+                    pathColor: "#4DD8FF",
                 })}
             />
         </div>
     )
 }
 
-export default Html
+export default ReactJs
