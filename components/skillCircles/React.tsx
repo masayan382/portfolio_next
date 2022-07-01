@@ -8,11 +8,14 @@ const ReactJs: React.FC = () => {
         <div style={{ width: 160, height: 160 }}>
             <CircularProgressbar
                 value={percentage}
-                text="React.js/Next.js"
+                text="React/Next"
+                background
                 styles={buildStyles({
                     strokeLinecap: "butt",
-                    textColor: "#4DD8FF",
+                    textColor: "#fff",
                     pathColor: "#4DD8FF",
+                    backgroundColor: "#000",
+                    textSize: "14px",
                 })}
             />
         </div>

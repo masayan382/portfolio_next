@@ -42,16 +42,21 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "100%",
+    width: "calc(100%-96px)",
     height: "100%",
-    padding: "96px 96px",
-    margin: "0 auto",
+    padding: "98px 96px 56px 96px",
+    margin: "0",
     color: "#fff",
 })
 
 const circleArea = css({
     width: "100%",
     display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    "> div": {
+        margin: "20px 20px",
+    },
 })
 
 const Skills: React.FC = () => {
@@ -62,25 +67,42 @@ const Skills: React.FC = () => {
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
+                            <div>
+                                <h2>Skills</h2>
+                                <ul>
+                                    <li>Web Design</li>
+                                    <li>Front-end</li>
+                                    <li>Back-end</li>
+                                    <li>SEO, Monetize</li>
+                                    ... and more
+                                </ul>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} justifyContent="center">
                             <div css={circleArea}>
                                 <div>
-                                    <h2>Skills</h2>
-                                    <ul>
-                                        <li>Web Design</li>
-                                        <li>Front-end</li>
-                                        <li>Back-end</li>
-                                        <li>SEO, Monetize</li>
-                                        ... and more
-                                    </ul>
+                                    <Html />
                                 </div>
                                 <div>
-                                    <Html />
                                     <Css />
+                                </div>
+                                <div>
                                     <Php />
+                                </div>
+                                <div>
                                     <Javascript />
+                                </div>
+                                <div style={{ width: "100%" }}></div>
+                                <div>
                                     <Wordpress />
+                                </div>
+                                <div>
                                     <Vue />
+                                </div>
+                                <div>
                                     <ReactJs />
+                                </div>
+                                <div>
                                     <Design />
                                 </div>
                             </div>

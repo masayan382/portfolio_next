@@ -9,10 +9,13 @@ const VueJs: React.FC = () => {
             <CircularProgressbar
                 value={percentage}
                 text="Vue.js"
+                background
                 styles={buildStyles({
                     strokeLinecap: "butt",
-                    textColor: "#41B883",
+                    textColor: "#fff",
                     pathColor: "#41B883",
+                    backgroundColor: "#000",
+                    textSize: "14px",
                 })}
             />
         </div>
