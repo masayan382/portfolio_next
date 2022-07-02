@@ -228,6 +228,14 @@ main .worksPage .swiper {
     height: 470px;
 }
 
+.swiper-slide.swiper-slide-next .worksPage .iconLink {
+    pointer-events: none;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active .worksPage .iconLink {
+    pointer-events: auto;
+}
+
 .worksPage .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,

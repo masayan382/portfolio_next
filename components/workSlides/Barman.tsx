@@ -60,30 +60,32 @@ const Barman: React.FC = () => {
                     </tbody>
                 </table>
             </CardContent>
-            <CardActions disableSpacing>
-                <Tooltip title="WEBサイトへ" placement="top">
-                    <Link
-                        href="https://masataka.site/barman/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <IconButton aria-label="site">
-                            <WebIcon />
-                        </IconButton>
-                    </Link>
-                </Tooltip>
-                <Tooltip title="Githubへ" placement="top">
-                    <Link
-                        href="https://masataka.site/barman/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <IconButton aria-label="github">
-                            <GitHubIcon />
-                        </IconButton>
-                    </Link>
-                </Tooltip>
-            </CardActions>
+            <div className="iconLink">
+                <CardActions disableSpacing>
+                    <Tooltip title="WEBサイトへ" placement="top">
+                        <Link
+                            href="https://masataka.site/barman/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IconButton aria-label="site">
+                                <WebIcon />
+                            </IconButton>
+                        </Link>
+                    </Tooltip>
+                    <Tooltip title="Githubへ" placement="top">
+                        <Link
+                            href="https://masataka.site/barman/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IconButton aria-label="github">
+                                <GitHubIcon />
+                            </IconButton>
+                        </Link>
+                    </Tooltip>
+                </CardActions>
+            </div>
         </Card>
     )
 }
