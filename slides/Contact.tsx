@@ -4,6 +4,7 @@ import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
+import MailForm from "../pages/MailForm"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -50,6 +51,7 @@ const Contact: React.FC = () => {
                                 <p>
                                     お仕事のご依頼・作品に関するご感想などは下記よりお問い合わせください。
                                 </p>
+                                <MailForm />
                             </div>
                         </Grid>
                     </Grid>
