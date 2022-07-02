@@ -4,6 +4,11 @@ import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
+import "tippy.js/themes/light.css"
+import "tippy.js/animations/perspective.css"
+
 import {
     Html,
     Css,
@@ -117,29 +122,118 @@ const Skills: React.FC = () => {
                     </Grid>
                     <div css={circleArea}>
                         <div>
-                            <Html />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "フルスクラッチでWEBサイトを構築できます。SEOを意識したマークアップ、リッチリザルト対応できます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Html />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <Css />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "SCSSからCSSへコンパイルできます。CSS設計もBEM～FLOCSSまで対応できます。フレームワークBootstrap,Tailwind-css,Material-UI,emotion使えます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Css />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <Php />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "PHP,Laravelで会員サイト等のサイト・システム作成ができます。MySQLを使用しDBへのデータ登録、抽出、削除更新したりフロント側と連携した画面作りもできます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Php />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <Javascript />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "javascript使用し、DOM操作し画面作成ができます。また、APIを叩きデータの取得、編集、画面表示させることができます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    {" "}
+                                    <Javascript />
+                                </div>
+                            </Tippy>
                         </div>
                         <div css={hydeBlock}></div>
                         <div>
-                            <Wordpress />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "現在ブログを７年間運用中。静的サイトをwordpress化できます。WEBサイトを構築、テーマ作成、サイトの引っ越し、サーバーアップできます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Wordpress />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <Vue />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "vue.js/vue-Cliを用いてプロトタイプのWEBサービスを作ることができます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Vue />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <ReactJs />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "React/Nextを使いプロトタイプのWEBサービスを作れます。redux,toolkit,hooks,Material-ui,typescriptを合わせて使用できます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <ReactJs />
+                                </div>
+                            </Tippy>
                         </div>
                         <div>
-                            <Design />
+                            <Tippy
+                                animation="perspective"
+                                inertia={true}
+                                theme={"light"}
+                                content={
+                                    "Photoshop、Illustratorで簡単な画像作成できます。XD,Figmaを使用し、ワイヤーフレーム・デザインカンプ作成できます。"
+                                }
+                            >
+                                <div style={{ cursor: "pointer" }}>
+                                    <Design />
+                                </div>
+                            </Tippy>
                         </div>
                     </div>
                 </div>
