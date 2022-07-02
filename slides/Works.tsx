@@ -74,8 +74,8 @@ const Works: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={10}>
-                            <h2>Works</h2>
+                        <Grid item xs={12}>
+                            <h2 style={{ marginTop: 0 }}>Works</h2>
                         </Grid>
                     </Grid>
                     <Grid container spacing={1}>

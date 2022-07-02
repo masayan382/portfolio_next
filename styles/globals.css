@@ -106,7 +106,7 @@ p {
 /*Scrollテキストの描写*/
 .nextBtn span {
     position: absolute;
-    left: -20px;
+    left: -36px;
     bottom: 0;
     height: 66px;
     color: #eee;
@@ -121,7 +121,7 @@ p {
     content: "";
     position: absolute;
     bottom: 0;
-    right: -6px;
+    right: 8px;
     width: 1px;
     height: 20px;
     background: #eee;
@@ -132,7 +132,7 @@ p {
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 14px;
     width: 1px;
     height: 50px;
     background: #eee;
@@ -153,7 +153,7 @@ p {
 /*Scrollテキストの描写*/
 .prevBtn span {
     position: absolute;
-    left: -20px;
+    left: -36px;
     top: 0;
     height: 50px;
     color: #eee;
@@ -168,7 +168,7 @@ p {
     content: "";
     position: absolute;
     top: 0;
-    right: -6px;
+    right: 8px;
     width: 1px;
     height: 20px;
     background: #eee;
@@ -179,7 +179,7 @@ p {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: 14px;
     width: 1px;
     height: 50px;
     background: #eee;

@@ -5,7 +5,7 @@ import "react-circular-progressbar/dist/styles.css"
 const Javascript: React.FC = () => {
     const percentage: any = 85
     return (
-        <div style={{ width: 160, height: 160 }}>
+        <div style={{ maxWidth: 160, minWidth: 64 }}>
             <CircularProgressbar
                 value={percentage}
                 text="javascript"
