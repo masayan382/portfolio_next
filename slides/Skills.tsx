@@ -111,13 +111,11 @@ const Skills: React.FC = () => {
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <h2 style={{ marginTop: 0 }}>Skills</h2>
-                            <ul>
-                                <li>Web Design</li>
-                                <li>Front-end</li>
-                                <li>Back-end</li>
-                                <li>SEO, Monetize</li>
-                                ... and more
-                            </ul>
+                            <p>・Web Design</p>
+                            <p>・Front-end</p>
+                            <p>・Back-end</p>
+                            <p>・SEO, Monetize ... and more!</p>
+                            <p> Please hover your mouse over the circles!!</p>
                         </Grid>
                     </Grid>
                     <div css={circleArea}>

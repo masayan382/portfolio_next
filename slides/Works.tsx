@@ -76,6 +76,7 @@ const Works: React.FC = () => {
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <h2 style={{ marginTop: 0 }}>Works</h2>
+                            <p>Please check out some of my works!</p>
                         </Grid>
                     </Grid>
                     <Grid container spacing={1}>
