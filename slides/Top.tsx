@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Image from "next/image"
 import { css, keyframes } from "@mui/styled-engine"
 import ParticlesBackground from "../components/ParticlesBackground"
@@ -93,12 +93,6 @@ const message = css({
 })
 
 const Top: React.FC = () => {
-    useEffect(() => {
-        return () => {
-            let nextBtn: any = document.querySelector(".nextBtn")
-            nextBtn.classList.add("swiper-button-disabled")
-        }
-    }, [])
     return (
         <>
             <ParticlesBackground />

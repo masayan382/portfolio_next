@@ -128,7 +128,6 @@ const Works: React.FC = () => {
                                     //     delay: 3000,
                                     //     disableOnInteraction: true,
                                     // }}
-                                    centeredSlides={true}
                                     navigation={true}
                                     pagination={{ clickable: true }}
                                     loop={true}

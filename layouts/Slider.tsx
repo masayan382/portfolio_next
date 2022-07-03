@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
 import { SwiperOptions } from "swiper"
@@ -19,6 +19,15 @@ SwiperCore.use([Pagination, Navigation, Mousewheel, EffectFade])
 const Slider: React.FC = () => {
     const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
     const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
+
+    useEffect(() => {
+        return () => {
+            let nextBtn: any = document.querySelector<HTMLElement>(".nextBtn")
+            console.log(nextBtn)
+            nextBtn.classList.add("swiper-button-disabled")
+            console.log("done")
+        }
+    }, [])
     return (
         <div
             style={{ position: "relative", width: "100vw", height: "100vh" }}
@@ -37,6 +46,7 @@ const Slider: React.FC = () => {
                 loop={false}
                 mousewheel={true}
                 modules={[Mousewheel, Pagination, EffectFade]}
+                // onSlideChange={() => hideNext()}
             >
                 <SwiperSlide>
                     <Top />
