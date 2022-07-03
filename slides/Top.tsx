@@ -3,6 +3,7 @@ import Image from "next/image"
 import { css, keyframes } from "@mui/styled-engine"
 import ParticlesBackground from "../components/ParticlesBackground"
 import { stepClasses } from "@mui/material"
+import { mq } from "./css"
 
 const topContent = css({
     position: "absolute",
@@ -62,6 +63,29 @@ const titleSub = css({
         content: '""',
         verticalAlign: "middle",
         textShadow: "1px 0 5px black",
+    },
+    "@media (max-width: 630px)": {
+        fontSize: "14px",
+        "&::before": {
+            display: "block",
+            margin: "10px auto",
+            width: "80%",
+            height: "2px",
+            backgroundColor: "#fff",
+            content: '""',
+            verticalAlign: "middle",
+            textShadow: "1px 0 5px black",
+        },
+        "&::after": {
+            display: "block",
+            margin: "10px auto",
+            width: "80%",
+            height: "2px",
+            backgroundColor: "#fff",
+            content: '""',
+            verticalAlign: "middle",
+            textShadow: "1px 0 5px black",
+        },
     },
 })
 
