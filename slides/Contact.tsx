@@ -75,7 +75,8 @@ const textArea = css({
 })
 
 const formArea = css({
-    width: "100%",
+    width: "90%",
+    margin: "0 auto",
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
