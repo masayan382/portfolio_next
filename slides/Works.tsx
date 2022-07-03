@@ -25,6 +25,7 @@ import { SwiperOptions } from "swiper"
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper" //使いたい機能をインポート
 import "swiper/css"
 import "swiper/css/autoplay"
+import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -86,7 +87,6 @@ const Works: React.FC = () => {
                                     <Swiper
                                         modules={[Pagination, Navigation]}
                                         spaceBetween={24}
-                                        slidesPerView={3}
                                         // autoplay={{
                                         //     delay: 3000,
                                         //     disableOnInteraction: true,
@@ -95,17 +95,36 @@ const Works: React.FC = () => {
                                         pagination={{ clickable: true }}
                                         loop={true}
                                         className="workSwiper"
+                                        grabCursor={true}
+                                        slidesPerView="auto"
+                                        breakpoints={{
+                                            400: {
+                                                slidesPerView: 1,
+                                                spaceBetween: 32,
+                                                slidesPerGroupSkip: 1,
+                                            },
+                                            600: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 8,
+                                                slidesPerGroupSkip: 2,
+                                            },
+                                            1280: {
+                                                slidesPerView: 3,
+                                                spaceBetween: 24,
+                                                slidesPerGroupSkip: 3,
+                                            },
+                                            1480: {
+                                                slidesPerView: 4,
+                                                spaceBetween: 32,
+                                                slidesPerGroupSkip: 4,
+                                            },
+                                            1920: {
+                                                slidesPerView: 5,
+                                                spaceBetween: 32,
+                                                slidesPerGroupSkip: 5,
+                                            },
+                                        }}
                                     >
-                                         
-                                        <SwiperSlide>
-                                            <Barman />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Necombo />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Travel />
-                                        </SwiperSlide>
                                         <SwiperSlide>
                                             <Barman />
                                         </SwiperSlide>

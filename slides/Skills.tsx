@@ -55,6 +55,9 @@ const sliderContainer = css({
     padding: "98px 80px 56px 96px",
     margin: "0",
     color: "#fff",
+    " p": {
+        margin: "8px 0",
+    },
     [mq[0]]: {
         padding: "56px 32px 56px",
     },
@@ -110,7 +113,7 @@ const Skills: React.FC = () => {
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
-                            <h2 style={{ marginTop: 0 }}>Skills</h2>
+                            <h2 style={{ margin: "0 0 8px" }}>Skills</h2>
                             <p>・Web Design</p>
                             <p>・Front-end</p>
                             <p>・Back-end</p>
