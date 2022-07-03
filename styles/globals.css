@@ -265,17 +265,85 @@ main .worksPage .swiper {
 }
 
 .worksPage .swiper-slide {
-    pointer-events: auto !important;
+    /* pointer-events: auto !important; */
     display: flex;
     justify-content: center;
     height: 470px;
 }
 
-.swiper-slide.swiper-slide-next .worksPage .iconLink {
-    pointer-events: none;
+/* .swiper-slide.swiper-slide-visible.swiper-slide-active
+    .worksPage
+    .workSwiper
+    .swiper-wrapper
+    .swiper-slide.swiper-slide-prev {
+    pointer-events: auto;
 }
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    .worksPage
+    .workSwiper
+    .swiper-wrapper
+    .swiper-slide.swiper-slide-next {
+    pointer-events: auto;
+} */
 
-.swiper-slide.swiper-slide-visible.swiper-slide-active .worksPage .iconLink {
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="2"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="3"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="4"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="5"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="6"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="7"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="8"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="9"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="10"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="11"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="12"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="13"] {
     pointer-events: auto;
 }
 

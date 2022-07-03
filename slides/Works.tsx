@@ -124,15 +124,15 @@ const Works: React.FC = () => {
                                 <Swiper
                                     modules={[Pagination, Navigation]}
                                     spaceBetween={24}
-                                    autoplay={{
-                                        delay: 3000,
-                                        disableOnInteraction: true,
-                                    }}
+                                    // autoplay={{
+                                    //     delay: 3000,
+                                    //     disableOnInteraction: true,
+                                    // }}
+                                    centeredSlides={true}
                                     navigation={true}
                                     pagination={{ clickable: true }}
                                     loop={true}
                                     className="workSwiper"
-                                    grabCursor={true}
                                     slidesPerView="auto"
                                     breakpoints={{
                                         400: {
