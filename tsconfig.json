@@ -24,7 +24,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/api/mail.js"
+    "pages/api/mail.js",
+    "slides/css.js"
   ],
   "exclude": [
     "node_modules"

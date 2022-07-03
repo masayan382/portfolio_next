@@ -27,6 +27,7 @@ import "swiper/css"
 import "swiper/css/autoplay"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import { breakpoints, mq } from "./css"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -55,15 +56,35 @@ const topBg = css({
 })
 
 const sliderContainer = css({
-    width: "100%",
+    width: "calc(100%-96px)",
     height: "100%",
-    padding: "96px 96px",
-    margin: "0 auto",
+    // padding: "98px 80px 56px 96px",
+    margin: "0",
     color: "#fff",
+    [mq[0]]: {
+        padding: "56px 20px 56px",
+    },
+    [mq[1]]: {
+        padding: "56px 24px 56px",
+    },
+    [mq[2]]: {
+        padding: "98px 40px 56px",
+    },
+    [mq[3]]: {
+        padding: "98px 80px 56px",
+    },
 })
 const workArea = css({
-    width: "88%",
-    height: "100%",
+    padding: "0",
+    [mq[0]]: {
+        padding: "24px 0px 0px",
+    },
+    [mq[1]]: {
+        padding: "24px 0px 0px",
+    },
+    [mq[2]]: {
+        padding: "0px 0px",
+    },
 })
 
 SwiperCore.use([Pagination, Autoplay, Navigation])
@@ -83,92 +104,90 @@ const Works: React.FC = () => {
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <div className="worksPage" css={workArea}>
-                                <div>
-                                    <Swiper
-                                        modules={[Pagination, Navigation]}
-                                        spaceBetween={24}
-                                        // autoplay={{
-                                        //     delay: 3000,
-                                        //     disableOnInteraction: true,
-                                        // }}
-                                        navigation={true}
-                                        pagination={{ clickable: true }}
-                                        loop={true}
-                                        className="workSwiper"
-                                        grabCursor={true}
-                                        slidesPerView="auto"
-                                        breakpoints={{
-                                            400: {
-                                                slidesPerView: 1,
-                                                spaceBetween: 32,
-                                                slidesPerGroupSkip: 1,
-                                            },
-                                            600: {
-                                                slidesPerView: 2,
-                                                spaceBetween: 8,
-                                                slidesPerGroupSkip: 2,
-                                            },
-                                            1280: {
-                                                slidesPerView: 3,
-                                                spaceBetween: 24,
-                                                slidesPerGroupSkip: 3,
-                                            },
-                                            1480: {
-                                                slidesPerView: 4,
-                                                spaceBetween: 32,
-                                                slidesPerGroupSkip: 4,
-                                            },
-                                            1920: {
-                                                slidesPerView: 5,
-                                                spaceBetween: 32,
-                                                slidesPerGroupSkip: 5,
-                                            },
-                                        }}
-                                    >
-                                        <SwiperSlide>
-                                            <Barman />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Necombo />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Travel />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Sengoku />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Necord />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <WeatherBudda />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <BbsVue />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Tokugawa />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Chatbot />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Monoqlo />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Reactter />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <HooksCalendar />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <Lamall />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <TodoNext />
-                                        </SwiperSlide>
-                                    </Swiper>
-                                </div>
+                                <Swiper
+                                    modules={[Pagination, Navigation]}
+                                    spaceBetween={24}
+                                    // autoplay={{
+                                    //     delay: 3000,
+                                    //     disableOnInteraction: true,
+                                    // }}
+                                    navigation={true}
+                                    pagination={{ clickable: true }}
+                                    loop={true}
+                                    className="workSwiper"
+                                    grabCursor={true}
+                                    slidesPerView="auto"
+                                    breakpoints={{
+                                        400: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 32,
+                                            slidesPerGroupSkip: 1,
+                                        },
+                                        600: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 8,
+                                            slidesPerGroupSkip: 2,
+                                        },
+                                        1280: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 24,
+                                            slidesPerGroupSkip: 3,
+                                        },
+                                        1480: {
+                                            slidesPerView: 4,
+                                            spaceBetween: 32,
+                                            slidesPerGroupSkip: 4,
+                                        },
+                                        1920: {
+                                            slidesPerView: 5,
+                                            spaceBetween: 32,
+                                            slidesPerGroupSkip: 5,
+                                        },
+                                    }}
+                                >
+                                    <SwiperSlide>
+                                        <Barman />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Necombo />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Travel />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Sengoku />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Necord />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <WeatherBudda />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <BbsVue />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Tokugawa />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Chatbot />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Monoqlo />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Reactter />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <HooksCalendar />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Lamall />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <TodoNext />
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </Grid>
                     </Grid>

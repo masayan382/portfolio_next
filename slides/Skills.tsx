@@ -8,7 +8,7 @@ import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import "tippy.js/themes/light.css"
 import "tippy.js/animations/perspective.css"
-
+import { breakpoints, mq } from "./css"
 import {
     Html,
     Css,
@@ -20,9 +20,6 @@ import {
     Vue,
 } from "../components/skillCircles/index"
 
-const breakpoints = [0, 400, 600, 960, 1280, 1920]
-
-const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`)
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -52,20 +49,23 @@ const topBg = css({
 const sliderContainer = css({
     width: "calc(100%-96px)",
     height: "100%",
-    padding: "98px 80px 56px 96px",
+    // padding: "98px 80px 56px 96px",
     margin: "0",
     color: "#fff",
     " p": {
         margin: "8px 0",
     },
     [mq[0]]: {
-        padding: "56px 32px 56px",
+        padding: "56px 20px 56px",
     },
     [mq[1]]: {
         padding: "56px 24px 56px",
     },
     [mq[2]]: {
-        padding: "98px 80px 56px 96px",
+        padding: "98px 40px 56px",
+    },
+    [mq[3]]: {
+        padding: "98px 80px 56px",
     },
 })
 
