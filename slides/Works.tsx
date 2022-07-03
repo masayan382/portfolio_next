@@ -27,7 +27,7 @@ import "swiper/css"
 import "swiper/css/autoplay"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { breakpoints, mq } from "./css"
+import { mq } from "./css"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -56,6 +56,9 @@ const topBg = css({
 })
 
 const sliderContainer = css({
+    h2: {
+        margin: "12px 0",
+    },
     width: "calc(100%-96px)",
     height: "100%",
     // padding: "98px 80px 56px 96px",
@@ -71,9 +74,23 @@ const sliderContainer = css({
         padding: "98px 40px 56px",
     },
     [mq[3]]: {
-        padding: "98px 80px 56px",
+        padding: "98px 40px 56px",
     },
 })
+
+const textArea = css({
+    padding: "0",
+    [mq[0]]: {
+        padding: "0px 16px",
+    },
+    [mq[1]]: {
+        padding: "0px 12px",
+    },
+    [mq[2]]: {
+        padding: "0px 40px",
+    },
+})
+
 const workArea = css({
     padding: "0",
     [mq[0]]: {
@@ -96,10 +113,10 @@ const Works: React.FC = () => {
             <div css={topBg}>
                 <div css={sliderContainer}>
                     <Grid container spacing={1}>
-                        <Grid item xs={12}>
-                            <h2 style={{ marginTop: 0 }}>Works</h2>
+                        <div css={textArea}>
+                            <h2>Works</h2>
                             <p>Please check out some of my works!</p>
-                        </Grid>
+                        </div>
                     </Grid>
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
@@ -107,10 +124,10 @@ const Works: React.FC = () => {
                                 <Swiper
                                     modules={[Pagination, Navigation]}
                                     spaceBetween={24}
-                                    // autoplay={{
-                                    //     delay: 3000,
-                                    //     disableOnInteraction: true,
-                                    // }}
+                                    autoplay={{
+                                        delay: 3000,
+                                        disableOnInteraction: true,
+                                    }}
                                     navigation={true}
                                     pagination={{ clickable: true }}
                                     loop={true}
