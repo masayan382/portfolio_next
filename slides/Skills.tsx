@@ -175,7 +175,7 @@ const Skills: React.FC = () => {
                                 inertia={true}
                                 theme={"light"}
                                 content={
-                                    "PHP,Laravelで会員サイト等のサイト・システム作成ができます。MySQLを使用しDBへのデータ登録、抽出、削除更新したりフロント側と連携した画面作りもできます。"
+                                    "PHP,Laravelで会員サイト等のサイト・システム作成ができます。MySQLを使用しDBを使用したCRUD機能作成できます。"
                                 }
                             >
                                 <div style={{ cursor: "pointer" }}>
@@ -233,7 +233,7 @@ const Skills: React.FC = () => {
                                 inertia={true}
                                 theme={"light"}
                                 content={
-                                    "React/Nextを使いプロトタイプのWEBサービスを作れます。redux,toolkit,hooks,Material-ui,typescriptを合わせて使用できます。"
+                                    "React/Nextを使いプロトタイプのWEBサービスを作れます。redux,toolkit,hooks,typescriptを合わせて使用できます。スタイリングとしてはMaterial-ui,emotion,tailwind-css,styled-componentで実装できます。"
                                 }
                             >
                                 <div style={{ cursor: "pointer" }}>
@@ -247,7 +247,7 @@ const Skills: React.FC = () => {
                                 inertia={true}
                                 theme={"light"}
                                 content={
-                                    "Photoshop、Illustratorで簡単な画像作成できます。XD,Figmaを使用し、ワイヤーフレーム・デザインカンプ作成できます。"
+                                    "Photoshop、Illustratorで簡単な画像作成・編集できます。XD,Figmaを使用し、ワイヤーフレーム・デザインカンプ作成できます。"
                                 }
                             >
                                 <div style={{ cursor: "pointer" }}>

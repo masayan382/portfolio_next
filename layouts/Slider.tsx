@@ -46,7 +46,7 @@ const Slider: React.FC = () => {
                 loop={false}
                 mousewheel={true}
                 modules={[Mousewheel, Pagination, EffectFade]}
-                // onSlideChange={() => hideNext()}
+                // onSlideChange={() => console.log("slide change")}
             >
                 <SwiperSlide>
                     <Top />
