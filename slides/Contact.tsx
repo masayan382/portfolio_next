@@ -6,6 +6,9 @@ import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import MailForm from "../pages/MailForm"
 import { mq } from "./css"
+import ToTop from "../components/ToTop"
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
+import { positions } from "@mui/system"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -25,6 +28,20 @@ const bottomBg = css({
     backgroundPosition: "right",
     backgroundSize: "cover",
 })
+const toTop = css({
+    position: "absolute",
+    width: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    right: "16px",
+    bottom: "78px",
+    zIndex: "100",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+})
+
 const topBg = css({
     backgroundImage: "url('/img/shadow95.png')",
     height: "100vh",
@@ -100,6 +117,14 @@ const Contact: React.FC = () => {
                         <MailForm />
                     </div>
                 </div>
+            </div>
+            <div
+                css={toTop}
+                onClick={() => {
+                    console.log("done")
+                }}
+            >
+                <ToTop />
             </div>
         </div>
     )

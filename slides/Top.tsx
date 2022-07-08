@@ -13,6 +13,8 @@ const topContent = css({
     textAlign: "center",
     textShadow: "1px 0 5px black",
     width: "100%",
+    margin: "0 auto",
+    maxWidth: "640px",
 })
 
 const title = css({

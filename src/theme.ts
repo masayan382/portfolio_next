@@ -15,6 +15,18 @@ const theme = createTheme({
             main: red.A400,
         },
     },
+    typography: {
+        fontFamily: [
+            "Roboto",
+            '"Noto Sans JP"',
+            '"Helvetica"',
+            "Arial",
+            "sans-serif",
+        ].join(","),
+        button: {
+            textTransform: "none",
+        },
+    },
 })
 
 export default theme
