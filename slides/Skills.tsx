@@ -95,18 +95,24 @@ const circleArea = css({
         margin: "20px 20px",
     },
     [mq[0]]: {
+        marginTop: "8px",
         "> div": {
-            margin: "12px 12px",
+            margin: "8px 8px",
             width: "96px",
         },
     },
+    [mq[1]]: {
+        marginTop: "40px",
+    },
     [mq[2]]: {
+        marginTop: "0px",
         "> div": {
             margin: "12px 12px",
             width: "114px",
         },
     },
     [mq[3]]: {
+        marginTop: "0px",
         "> div": {
             margin: "24px 24px",
             width: "140px",
