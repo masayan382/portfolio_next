@@ -1,11 +1,7 @@
-// import "./styles.css"
-// react-hook-formから、useFormとSubmitHandlerをimport
-// SubmitHandlerは、submitイベントに関する関数の型宣言に使う
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 import type { NextPage } from "next"
 import { Button, Stack, TextField } from "@mui/material"
 
-// フォームの入力値についての型定義。useFormフックを書く時に使う。
 type FormInput = {
     name: string
     email: string
@@ -22,8 +18,26 @@ const MailForm2: NextPage = () => {
     } = useForm<FormInput>()
 
     const onSubmit: SubmitHandler<FormInput> = (data) => {
-        console.log("Submit")
-        console.log(data)
+        fetch("/api/mail", {
+            method: "POST",
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                msg: data.comment,
+            }),
+        })
+            .then((res) => {
+                console.log("Response received")
+                if (res.status === 200) {
+                    alert("メール送信完了")
+                } else {
+                    console.log(`Error: Status Code ${res.status}`)
+                }
+            })
+            .catch((e) => {
+                console.log(`Error: ${e}`)
+                alert("メール送信に失敗しました")
+            })
     }
     return (
         <>
