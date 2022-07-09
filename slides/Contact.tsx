@@ -5,7 +5,6 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import MailForm from "../pages/MailForm"
-import MailForm2 from "../pages/MailForm2"
 import { mq } from "./css"
 import ToTop from "../components/ToTop"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
@@ -93,7 +92,7 @@ const Contact: React.FC = () => {
                             </p>
                         </div>
                     </Grid>
-                    <MailForm2 />
+                    <MailForm />
                 </div>
             </div>
             <ToTop />
