@@ -93,9 +93,7 @@ const Contact: React.FC = () => {
                             </p>
                         </div>
                     </Grid>
-                    <div>
-                        <MailForm2 />
-                    </div>
+                    <MailForm2 />
                 </div>
             </div>
             <ToTop />

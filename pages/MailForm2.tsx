@@ -1,6 +1,7 @@
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 import type { NextPage } from "next"
 import { Button, Stack, TextField } from "@mui/material"
+import { css } from "@mui/styled-engine"
 
 type FormInput = {
     name: string
@@ -8,6 +9,12 @@ type FormInput = {
     emailConfirm: string
     comment: string
 }
+
+const narrowMsg = css({
+    " p": {
+        margin: "4px 0",
+    },
+})
 
 const MailForm2: NextPage = () => {
     const {
@@ -56,6 +63,7 @@ const MailForm2: NextPage = () => {
                             margin: "4px 0",
                         },
                     }}
+                    css={narrowMsg}
                 >
                     <Controller
                         name="name"

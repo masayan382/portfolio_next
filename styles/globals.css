@@ -428,29 +428,18 @@ main .worksPage .swiper {
 } */
 form {
     max-width: 420px;
-    margin: 50px auto;
+    margin: 56px auto;
 }
-textarea {
-    height: 150px;
-    line-height: 150%;
-    resize: vertical;
-}
-
-[type="submit"] {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    width: 100%;
-    background: #cc6666;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: all 0.3s;
-    margin-top: -4px;
-    font-weight: 700;
-}
-[type="submit"]:hover {
-    background: #cc4949;
+@media screen and (max-width: 400px) {
+    form {
+        margin: 6px auto;
+    }
+    form p.Mui-error {
+        font-size: 10px !important;
+    }
+    form
+        .MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.Mui-error
+        input {
+        height: 1em;
+    }
 }
