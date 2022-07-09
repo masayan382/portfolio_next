@@ -9,6 +9,7 @@ import { CacheProvider, EmotionCache } from "@emotion/react"
 import theme from "../src/theme"
 import createEmotionCache from "../src/createEmotionCache"
 import "swiper/css/bundle"
+import { useEffect, useState } from "react"
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -24,19 +25,33 @@ function MyApp(props: MyAppProps) {
         pageProps,
     } = props
 
+    const [show_screen, setShowScreen] = useState(false)
+
+    useEffect(() => {
+        setShowScreen(true)
+    }, [])
+
     return (
-        <CacheProvider value={emotionCache}>
-            <Head>
-                <meta
-                    name="viewport"
-                    content="initial-scale=1, width=device-width"
-                />
-            </Head>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </CacheProvider>
+        <>
+            {show_screen ? (
+                <>
+                    <CacheProvider value={emotionCache}>
+                        <Head>
+                            <meta
+                                name="viewport"
+                                content="initial-scale=1, width=device-width"
+                            />
+                        </Head>
+                        <ThemeProvider theme={theme}>
+                            <CssBaseline />
+                            <Component {...pageProps} />
+                        </ThemeProvider>
+                    </CacheProvider>
+                </>
+            ) : (
+                ""
+            )}
+        </>
     )
 }
 
