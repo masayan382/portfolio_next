@@ -15,6 +15,7 @@ const MailForm2: NextPage = () => {
         handleSubmit,
         getValues,
         formState: { errors },
+        reset,
     } = useForm<FormInput>()
 
     const onSubmit: SubmitHandler<FormInput> = (data) => {
@@ -30,8 +31,10 @@ const MailForm2: NextPage = () => {
                 console.log("Response received")
                 if (res.status === 200) {
                     alert("メール送信完了")
+                    reset()
                 } else {
                     console.log(`Error: Status Code ${res.status}`)
+                    alert("メール送信に失敗しました")
                 }
             })
             .catch((e) => {
@@ -49,6 +52,9 @@ const MailForm2: NextPage = () => {
                         backgroundColor: "white",
                         borderRadius: "8px",
                         boxShadow: 4,
+                        p: {
+                            margin: "4px 0",
+                        },
                     }}
                 >
                     <Controller
