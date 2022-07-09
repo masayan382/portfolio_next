@@ -28,19 +28,6 @@ const bottomBg = css({
     backgroundPosition: "right",
     backgroundSize: "cover",
 })
-const toTop = css({
-    position: "absolute",
-    width: "50px",
-    height: "50px",
-    borderRadius: "50%",
-    right: "16px",
-    bottom: "78px",
-    zIndex: "100",
-    cursor: "pointer",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-})
 
 const topBg = css({
     backgroundImage: "url('/img/shadow95.png')",
@@ -118,12 +105,7 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div
-                css={toTop}
-                onClick={() => {
-                    console.log("done")
-                }}
-            >
+            <div>
                 <ToTop />
             </div>
         </div>
