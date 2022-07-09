@@ -4,7 +4,6 @@
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 import type { NextPage } from "next"
 import { Button, Stack, TextField } from "@mui/material"
-import Box from "@mui/material/Box"
 
 // フォームの入力値についての型定義。useFormフックを書く時に使う。
 type FormInput = {
@@ -121,6 +120,8 @@ const MailForm2: NextPage = () => {
                                 helperText={
                                     errors.comment && errors.comment.message
                                 }
+                                multiline
+                                rows={6}
                             />
                         )}
                     />
