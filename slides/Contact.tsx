@@ -5,6 +5,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import MailForm from "../pages/MailForm"
+import MailForm2 from "../pages/MailForm2"
 import { mq } from "./css"
 import ToTop from "../components/ToTop"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
@@ -47,7 +48,6 @@ const sliderContainer = css({
     margin: "0",
     // padding: "96px 96px",
     color: "#fff",
-    textShadow: "1px 0 5px black",
     " p": {
         margin: "8px 0",
     },
@@ -66,6 +66,7 @@ const sliderContainer = css({
 })
 
 const textArea = css({
+    textShadow: "1px 0 5px black",
     padding: "0",
     [mq[0]]: {
         padding: "0px 16px",
@@ -76,14 +77,6 @@ const textArea = css({
     [mq[2]]: {
         padding: "0px 40px",
     },
-})
-
-const formArea = css({
-    width: "90%",
-    margin: "0 auto",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
 })
 
 const Contact: React.FC = () => {
@@ -100,14 +93,12 @@ const Contact: React.FC = () => {
                             </p>
                         </div>
                     </Grid>
-                    <div css={formArea}>
-                        <MailForm />
+                    <div>
+                        <MailForm2 />
                     </div>
                 </div>
             </div>
-            <div>
-                <ToTop />
-            </div>
+            <ToTop />
         </div>
     )
 }

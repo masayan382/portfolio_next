@@ -23,9 +23,7 @@ const Slider: React.FC = () => {
     useEffect(() => {
         return () => {
             let nextBtn: any = document.querySelector<HTMLElement>(".nextBtn")
-            console.log(nextBtn)
             nextBtn.classList.add("swiper-button-disabled")
-            console.log("done")
         }
     }, [])
     return (
