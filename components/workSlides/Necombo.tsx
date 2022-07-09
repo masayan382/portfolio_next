@@ -9,7 +9,7 @@ import WebIcon from "@mui/icons-material/Web"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import Tooltip from "@mui/material/Tooltip"
 import Link from "@mui/material/Link"
-
+import Box from "@mui/material/Box"
 import { css } from "@mui/styled-engine"
 
 const cardTable = css({
@@ -31,56 +31,58 @@ const cardTable = css({
 
 const Necombo: React.FC = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
-            <CardHeader title="Necombo" />
-            <CardMedia
-                component="img"
-                height="194"
-                image="/work/necombo.png"
-                alt="Necombo"
-            />
-            <CardContent style={{ padding: "4px 16px" }}>
-                <table css={cardTable}>
-                    <thead></thead>
-                    <tbody>
-                        <tr>
-                            <th>概要</th>
-                            <td>
-                                架空の保護猫カフェのLP。レスポンシブデザイン。斜線を多用するデザインで作成。
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>公開日</th>
-                            <td>2020/06/07</td>
-                        </tr>
-                        <tr>
-                            <th>使用技術</th>
-                            <td>HTML、CSS、SCSS、javascript、jQuery</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </CardContent>
-            <CardActions disableSpacing>
-                <Tooltip title="WEBサイトへ" placement="top">
-                    <Link
-                        href="https://masataka.site/necombo/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <IconButton aria-label="site">
-                            <WebIcon />
-                        </IconButton>
-                    </Link>
-                </Tooltip>
-                <Tooltip title="Githubへ" placement="top">
-                    <Link href="" target="_blank" rel="noopener noreferrer">
-                        <IconButton aria-label="github">
-                            <GitHubIcon />
-                        </IconButton>
-                    </Link>
-                </Tooltip>
-            </CardActions>
-        </Card>
+        <Box sx={{ boxShadow: 5 }}>
+            <Card sx={{ maxWidth: 345 }}>
+                <CardHeader title="Necombo" />
+                <CardMedia
+                    component="img"
+                    height="194"
+                    image="/work/necombo.png"
+                    alt="Necombo"
+                />
+                <CardContent style={{ padding: "4px 16px" }}>
+                    <table css={cardTable}>
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <th>概要</th>
+                                <td>
+                                    架空の保護猫カフェのLP。レスポンシブデザイン。斜線を多用するデザインで作成。
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2020/06/07</td>
+                            </tr>
+                            <tr>
+                                <th>使用技術</th>
+                                <td>HTML、CSS、SCSS、javascript、jQuery</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </CardContent>
+                <CardActions disableSpacing>
+                    <Tooltip title="WEBサイトへ" placement="top">
+                        <Link
+                            href="https://masataka.site/necombo/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IconButton aria-label="site">
+                                <WebIcon />
+                            </IconButton>
+                        </Link>
+                    </Tooltip>
+                    <Tooltip title="Githubへ" placement="top">
+                        <Link href="" target="_blank" rel="noopener noreferrer">
+                            <IconButton aria-label="github">
+                                <GitHubIcon />
+                            </IconButton>
+                        </Link>
+                    </Tooltip>
+                </CardActions>
+            </Card>
+        </Box>
     )
 }
 
