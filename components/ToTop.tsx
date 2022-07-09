@@ -17,6 +17,9 @@ const topBtn = css({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    ":hover": {
+        opacity: "0.8",
+    },
 })
 
 const ToTop: React.FC = () => {
