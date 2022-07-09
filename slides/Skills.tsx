@@ -105,7 +105,7 @@ const circleArea = css({
         marginTop: "40px",
     },
     [mq[2]]: {
-        marginTop: "0px",
+        marginTop: "16px",
         "> div": {
             margin: "12px 12px",
             width: "114px",
