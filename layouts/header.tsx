@@ -40,7 +40,7 @@ function Header() {
                         sx={{ flexGrow: 1, marginLeft: 2 }}
                         color="secondary"
                     >
-                        Portfolio
+                        <a href="/">Portfolio</a>
                     </Typography>
                 </Toolbar>
             </div>
