@@ -9,6 +9,7 @@ import theme from "../src/theme"
 import createEmotionCache from "../src/createEmotionCache"
 import "swiper/css/bundle"
 import { useEffect, useState } from "react"
+import Loading from "../components/Loading"
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -48,7 +49,7 @@ function MyApp(props: MyAppProps) {
                     </CacheProvider>
                 </>
             ) : (
-                ""
+                <Loading />
             )}
         </>
     )
