@@ -4,25 +4,21 @@ import { red } from "@mui/material/colors"
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#000",
+            main: "#333",
             contrastText: "#fff",
         },
         secondary: {
             main: "#fff",
-            contrastText: "000",
+            contrastText: "#333",
         },
         error: {
             main: red.A400,
         },
     },
     typography: {
-        fontFamily: [
-            "Roboto",
-            '"Noto Sans JP"',
-            '"Helvetica"',
-            "Arial",
-            "sans-serif",
-        ].join(","),
+        fontFamily: ["Roboto", "Noto Sans JP", "Cinzel", "sans-serif"].join(
+            ","
+        ),
         button: {
             textTransform: "none",
         },
