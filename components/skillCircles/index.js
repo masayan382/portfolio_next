@@ -1,0 +1,8 @@
+export { default as Html } from "./Html.tsx"
+export { default as Css } from "./Css.tsx"
+export { default as Javascript } from "./Javascript.tsx"
+export { default as Php } from "./Php.tsx"
+export { default as ReactJs } from "./React.tsx"
+export { default as Wordpress } from "./Wordpress.tsx"
+export { default as Design } from "./Design.tsx"
+export { default as Vue } from "./Vue.tsx"
