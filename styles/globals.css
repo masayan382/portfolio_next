@@ -1,16 +1,449 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+p {
+    textshadow: "1px 0 5px black";
+}
+
+h2 {
+    font-family: Cinzel, sans-serif, Roboto, Noto Sans JP;
+}
+
+.topSwiper .swiper {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.topSwiper .swiper-container {
+    height: 100vh;
+    overflow: hidden;
+}
+/* .topSwiper .swiper-wrapper .swiper-slide span {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+} */
+
+.topSwiper .swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+    left: 10px;
+    right: auto;
+    top: 50%;
+}
+
+.topSwiper
+    .swiper-pagination-vertical.swiper-pagination-bullets
+    .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
+    display: block;
+    background-color: #bbb4b4;
+}
+
+.topSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #fff;
+    width: 24px;
+}
+
+.topSwiper .swiper-pagination-bullet {
+    width: 16px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 0;
+    background: #333;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+@media screen and (max-width: 400px) {
+    .topSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: #fff;
+        width: 14px;
+    }
+    .topSwiper .swiper-pagination-bullet {
+        width: 8px;
+        height: 4px;
+        display: inline-block;
+        border-radius: 0;
+        background: #333;
+        opacity: 0.2;
+        transition: all 0.5s;
+    }
+}
+
+.prevBtn {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    top: 64px;
+    left: 4%;
+    animation: arrowUp 1s ease-in-out infinite 1s;
+}
+.nextBtn {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    bottom: 56px;
+    left: 4%;
+    animation: arrowDown 1s ease-in-out infinite 1s;
+}
+@media screen and (max-width: 400px) {
+    .prevBtn {
+        top: 64px;
+        left: 6%;
+    }
+    .nextBtn {
+        left: 6%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nextBtn {
+        transform: scale(0.7);
+    }
+
+    .prevBtn {
+        transform: scale(0.7);
+    }
+}
+@media screen and (max-width: 760px) {
+    .prevBtn span {
+        display: none;
+    }
+    .nextBtn span {
+        display: none;
+    }
+}
+
+.prevBtn.swiper-button-disabled {
+    visibility: hidden;
+}
+.nextBtn.swiper-button-disabled {
+    visibility: hidden;
+}
+/* scroll down */
+@keyframes arrowDown {
+    0% {
+        bottom: 60px;
+    }
+    50% {
+        bottom: 72px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}
+
+/*Scrollテキストの描写*/
+.nextBtn span {
+    position: absolute;
+    left: -36px;
+    bottom: 0;
+    height: 66px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.nextBtn:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(-31deg);
+}
+
+.nextBtn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 14px;
+    width: 1px;
+    height: 50px;
+    background: #eee;
+}
+/* scroll up */
+@keyframes arrowUp {
+    0% {
+        top: 70px;
+    }
+    50% {
+        top: 82px;
+    }
+    100% {
+        top: 70px;
+    }
+}
+
+/*Scrollテキストの描写*/
+.prevBtn span {
+    position: absolute;
+    left: -36px;
+    top: 0;
+    height: 50px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.prevBtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 8px;
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(31deg);
+}
+
+.prevBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 14px;
+    width: 1px;
+    height: 50px;
+    background: #eee;
+}
+/*workSwiper */
+/* main .worksPage .workSwiper.swiper span {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 345px;
+    height: auto;
+} */
+.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    overflow: auto;
+    max-width: 345px;
+    height: 470px;
+}
+main .worksPage .swiper {
+    position: relative;
+    width: 88%;
+    height: 500px;
+    z-index: 10;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.worksPage .swiper-slide {
+    /* pointer-events: auto !important; */
+    display: flex;
+    justify-content: center;
+    height: 470px;
+}
+
+/* .swiper-slide.swiper-slide-visible.swiper-slide-active
+    .worksPage
+    .workSwiper
+    .swiper-wrapper
+    .swiper-slide.swiper-slide-prev {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    .worksPage
+    .workSwiper
+    .swiper-wrapper
+    .swiper-slide.swiper-slide-next {
+    pointer-events: auto;
+} */
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="2"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="3"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="4"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="5"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="6"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="7"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="8"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="1"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="9"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="10"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="11"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="12"] {
+    pointer-events: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active
+    [data-swiper-slide-index="13"] {
+    pointer-events: auto;
+}
+
+.worksPage .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+}
+
+.worksPage .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #fadb40;
+    width: 8px;
+    height: 8px;
+    transform: scale(1.4);
+}
+
+.worksPage .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #333;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+.worksPage
+    .swiper-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 6px;
+}
+
+.worksPage .swiper-button-next,
+.worksPage .swiper-button-prev {
+    color: #fadb40;
+    width: 32px;
+    height: 32px;
+    background: rgba(51, 51, 51, 0.6);
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.worksPage .swiper-button-next:after,
+.worksPage .swiper-button-prev:after {
+    font-weight: bold;
+    font-size: 16px !important;
+}
+
+/* mail */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.feedback-input {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    /* background-color: transparent; */
+    background-color: white;
+    border: 2px solid #cc6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #cc4949;
+}
+
+/* body {
+    background: rgb(30, 30, 40);
+} */
+form {
+    max-width: 420px;
+    margin: 56px auto;
+}
+@media screen and (max-width: 400px) {
+    form {
+        margin: 6px auto;
+    }
+    form p.Mui-error {
+        font-size: 10px !important;
+    }
+    form
+        .MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.Mui-error
+        input {
+        height: 1em;
+    }
 }
