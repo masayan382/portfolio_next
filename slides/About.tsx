@@ -54,7 +54,7 @@ const sliderContainer = css({
     height: "auto",
     padding: "96px 96px",
     color: "#fff",
-    letterSpacing: "0.1",
+    letterSpacing: "0.1em",
     textShadow: "1px 0 5px black",
     [mq[0]]: {
         padding: "56px 36px 56px",
