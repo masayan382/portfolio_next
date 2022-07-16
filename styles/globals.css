@@ -436,7 +436,7 @@ form {
 }
 @media screen and (max-width: 400px) {
     form {
-        margin: 6px auto;
+        margin: 32px auto;
     }
     form p.Mui-error {
         font-size: 10px !important;
