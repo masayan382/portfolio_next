@@ -12,7 +12,10 @@ import ScrollToTop from "../components/ScrollToTop"
 
 const contentsBase = css({
     // background: "red",
-    // margin: "56px 0",
+    backgroundImage:
+        "linear-gradient(150deg, rgba(247, 166, 12, 1) 10%, rgba(255, 34, 87, 1) 40%, rgba(154, 39, 238, 1) 68%, rgba(35, 102, 247, 1) 90%)",
+    width: "100%",
+    height: "100%",
     color: "#333",
 })
 
@@ -39,7 +42,14 @@ const list = () => {
     return (
         <div css={contentsBase}>
             <AppBarArticle />
-            <Box sx={{ flexGrow: 1 }}>
+            <Box
+                sx={{
+                    flexGrow: 1,
+                    marginTop: 2,
+                    paddingBottom: 12,
+                    // background: "lightBlue",
+                }}
+            >
                 <Grid
                     container
                     spacing={2}
@@ -51,14 +61,6 @@ const list = () => {
                     <Grid item xs={11}>
                         <h2 id="title">KOMAME</h2>
                     </Grid>
-                </Grid>
-                <Grid
-                    container
-                    spacing={2}
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                >
                     <Grid item xs={11}>
                         仮想案件
                         新規サービス・コーヒー豆定期購入アプリ「KOMAME」について
@@ -102,8 +104,8 @@ const list = () => {
                     </Grid>
                 </Grid>
             </Box>
-            <ScrollToTop />
             <FooterArticle />
+            <ScrollToTop />
         </div>
     )
 }

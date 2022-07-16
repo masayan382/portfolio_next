@@ -31,6 +31,7 @@ const ScrollToTop: React.FC = (props: any) => {
                 onClick={handleClick}
                 role="presentation"
                 className={classes.root}
+                style={{ zIndex: "100" }}
             >
                 <Fab
                     // color="primary"

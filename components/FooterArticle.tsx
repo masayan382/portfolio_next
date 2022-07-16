@@ -23,7 +23,7 @@ function Copyright() {
 const footerAreaDetail = css({
     backgroundColor: "#000",
     textAlign: "center",
-    position: "static",
+    position: "fixed",
     bottom: "0",
     width: "100vw",
     zIndex: "100",
