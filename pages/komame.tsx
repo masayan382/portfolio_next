@@ -6,10 +6,11 @@ import Box from "@mui/material/Box"
 import Paper from "@mui/material/Paper"
 import Grid from "@mui/material/Grid"
 import { css } from "@mui/styled-engine"
+import AppBarArticle from "../components/AppBarArticle"
 
 const contentsBase = css({
-    background: "red",
-    margin: "56px 0",
+    // background: "red",
+    // margin: "56px 0",
     color: "#333",
 })
 
@@ -35,7 +36,7 @@ const list = () => {
     const classes = useStyles()
     return (
         <div css={contentsBase}>
-            <Header style={{ color: "#000" }} />
+            <AppBarArticle />
             <Box sx={{ flexGrow: 1 }}>
                 <Grid
                     container
@@ -45,7 +46,7 @@ const list = () => {
                     alignItems="center"
                     textAlign="center"
                 >
-                    <Grid item xs={8}>
+                    <Grid item xs={11}>
                         <h2>KOMAME</h2>
                     </Grid>
                 </Grid>
@@ -56,7 +57,7 @@ const list = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item xs={10}>
+                    <Grid item xs={11}>
                         <Paper>例えば</Paper>
                     </Grid>
                 </Grid>
