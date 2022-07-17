@@ -7,6 +7,7 @@ import FooterArticle from "../components/FooterArticle"
 import ScrollToTop from "../components/ScrollToTop"
 import Image from "next/image"
 import { mq } from "../slides/css"
+import Cardbord from "../components/Cardbord"
 
 const contentsBase = css({
     backgroundImage:
@@ -14,9 +15,6 @@ const contentsBase = css({
     width: "100%",
     height: "100%",
     color: "#333",
-    // " img": {
-    //     objectFit: "cover",
-    // },
     h2: {
         " span": {
             position: "relative",
@@ -41,28 +39,6 @@ const contentsBase = css({
                     left: "-2%",
                     width: "108%",
                 },
-            },
-        },
-    },
-
-    h3: {
-        margin: "28px 0",
-        " span": {
-            position: "relative",
-            color: "white",
-            background: "#333",
-            lineHeight: "1.4",
-            padding: "0.5em 0.5em 0.5em 1.8em",
-            borderRadius: "2px",
-            "&:before": {
-                // fontFamily: "Font Awesome 5 Free",
-                content: "url(/design/check.png)",
-                width: "28px",
-                height: "28px",
-                position: "absolute",
-                top: "0",
-                left: "0",
-                transform: "scale(0.3)",
             },
         },
     },
@@ -101,14 +77,18 @@ const list = () => {
                     textAlign="center"
                 >
                     <Grid item xs={10}>
-                        <Paper
-                            elevation={3}
-                            //
-                            css={paperArea}
-                        >
+                        <Paper elevation={3} css={paperArea}>
                             <h2 id="title" style={{ textAlign: "center" }}>
                                 <span>WORKS LIST</span>
                             </h2>
+                            <h3>DESIGN</h3>
+                            <Cardbord />
+                            <h3>WEB SITE</h3>
+                            <Cardbord />
+                            <h3>PROTOTYPE</h3>
+                            <Cardbord />
+                            <h3>FRAMEWORK</h3>
+                            <Cardbord />
                         </Paper>
                     </Grid>
                 </Grid>
