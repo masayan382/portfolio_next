@@ -6,6 +6,8 @@ import { css } from "@mui/styled-engine"
 import AppBarArticle from "../components/AppBarArticle"
 import FooterArticle from "../components/FooterArticle"
 import ScrollToTop from "../components/ScrollToTop"
+import Image from "next/image"
+import { mq } from "../slides/css"
 
 const contentsBase = css({
     backgroundImage:
@@ -15,7 +17,12 @@ const contentsBase = css({
     color: "#333",
     " ol": {
         counterReset: "counter",
-        paddingLeft: "16px",
+        [mq[0]]: {
+            paddingLeft: "4px",
+        },
+        [mq[2]]: {
+            addingLeft: "16px",
+        },
         " li": {
             listStyleType: "none",
             fontSize: "14px",
@@ -48,18 +55,31 @@ const contentsBase = css({
     h2: {
         " span": {
             position: "relative",
+            [mq[0]]: {
+                display: "block",
+            },
+            [mq[2]]: {
+                display: "inline-block",
+            },
             "&:after": {
-                content: '""',
-                position: "absolute",
-                left: "-2%",
-                bottom: "-16%",
-                width: "108%",
-                height: "6px",
-                background:
-                    "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+                [mq[0]]: {
+                    content: '""',
+                    position: "absolute",
+                    left: "0",
+                    bottom: "-16%",
+                    width: "100%",
+                    height: "6px",
+                    background:
+                        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+                },
+                [mq[2]]: {
+                    left: "-2%",
+                    width: "108%",
+                },
             },
         },
     },
+
     h3: {
         margin: "28px 0",
         " span": {
@@ -80,6 +100,17 @@ const contentsBase = css({
                 transform: "scale(0.3)",
             },
         },
+    },
+})
+
+const paperArea = css({
+    [mq[0]]: {
+        textAlign: "left",
+        padding: "24px 16px 64px",
+        letterSpacing: "0.05em",
+    },
+    [mq[2]]: {
+        padding: "24px 40px 64px",
     },
 })
 
@@ -105,11 +136,8 @@ const list = () => {
                     <Grid item xs={10}>
                         <Paper
                             elevation={3}
-                            style={{
-                                textAlign: "left",
-                                padding: "24px 40px",
-                                letterSpacing: "0.05em",
-                            }}
+                            //
+                            css={paperArea}
                         >
                             <h2 id="title" style={{ textAlign: "center" }}>
                                 <span>「KOMAME」について</span>
@@ -155,7 +183,6 @@ const list = () => {
                                     結論：「便利でリスクがないから使いましょう」という内容で訴求する。
                                 </span>
                             </strong>
-
                             <p>
                                 KOMAMEを使うにあたり「障害となるものは無く、メリットしかない」とユーザーの物差しで判断してもらうことでダウンロードにつなげる。
                             </p>
@@ -174,7 +201,6 @@ const list = () => {
                             <p>
                                 ターゲット層が30代から50代の男女（コア層は30-40代かも）とのことだったが、もっと詳細に挙げると下記を想定。
                             </p>
-
                             <ol>
                                 <li>コーヒーを豆から入れる習慣がある人</li>
                                 <li>コンビニコーヒーで満足できない人</li>
@@ -231,6 +257,25 @@ const list = () => {
                             <h3>
                                 <span>デザインカンプ</span>
                             </h3>
+                            <p>■PCデザイン■</p>
+                            <div style={{ textAlign: "center" }}>
+                                <Image
+                                    src="/design/KOMAME_pc.jpg"
+                                    alt=""
+                                    width={1280}
+                                    height={4357}
+                                />
+                            </div>
+
+                            <p>■SPデザイン■</p>
+                            <div style={{ textAlign: "center" }}>
+                                <Image
+                                    src="/design/KOMAME_sp.jpg"
+                                    alt=""
+                                    width={375}
+                                    height={6606}
+                                />
+                            </div>
 
                             <h3>
                                 <span>おわりに</span>
