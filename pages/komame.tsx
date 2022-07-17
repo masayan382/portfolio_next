@@ -1,6 +1,3 @@
-import React from "react"
-import { Header, Footer } from "../layouts/index"
-// import { makeStyles } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Box from "@mui/material/Box"
 import Paper from "@mui/material/Paper"
@@ -11,10 +8,79 @@ import FooterArticle from "../components/FooterArticle"
 import ScrollToTop from "../components/ScrollToTop"
 
 const contentsBase = css({
-    backgroundImage: "linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%)",
+    backgroundImage:
+        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
     width: "100%",
     height: "100%",
     color: "#333",
+    " ol": {
+        counterReset: "counter",
+        paddingLeft: "16px",
+        " li": {
+            listStyleType: "none",
+            fontSize: "14px",
+            lineHeight: "1.8",
+            marginBottom: "8px",
+            paddingLeft: "30px",
+            position: "relative",
+            "&:before": {
+                content: "counter(counter)",
+                counterIncrement: "counter",
+                backgroundImage:
+                    "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+                border: "none",
+                borderRadius: "50%",
+                boxSizing: "border-box",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "22px",
+                width: "22px",
+                color: "#333",
+                fontSize: "100%",
+                lineHeight: "1",
+                position: "absolute",
+                top: "0",
+                left: "0",
+            },
+        },
+    },
+    h2: {
+        " span": {
+            position: "relative",
+            "&:after": {
+                content: '""',
+                position: "absolute",
+                left: "-2%",
+                bottom: "-16%",
+                width: "108%",
+                height: "6px",
+                background:
+                    "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+            },
+        },
+    },
+    h3: {
+        margin: "28px 0",
+        " span": {
+            position: "relative",
+            color: "white",
+            background: "#333",
+            lineHeight: "1.4",
+            padding: "0.5em 0.5em 0.5em 1.8em",
+            borderRadius: "2px",
+            "&:before": {
+                // fontFamily: "Font Awesome 5 Free",
+                content: "url(/design/check.png)",
+                width: "28px",
+                height: "28px",
+                position: "absolute",
+                top: "0",
+                left: "0",
+                transform: "scale(0.3)",
+            },
+        },
+    },
 })
 
 const list = () => {
@@ -41,21 +107,25 @@ const list = () => {
                             elevation={3}
                             style={{
                                 textAlign: "left",
-                                padding: "20px",
+                                padding: "24px 40px",
                                 letterSpacing: "0.05em",
                             }}
                         >
                             <h2 id="title" style={{ textAlign: "center" }}>
-                                「KOMAME」について
+                                <span>「KOMAME」について</span>
                             </h2>
-                            <h3>仮想案件</h3>
+                            <h3>
+                                <span>仮想案件</span>
+                            </h3>
                             <p>
                                 内容：コーヒー豆定期購入アプリ「KOMAME」のLP制作
                             </p>
                             <p>
                                 目的：LPを見たユーザーがアプリをダウンロードする
                             </p>
-                            <h3>ヒアリング内容</h3>
+                            <h3>
+                                <span>ヒアリング内容</span>
+                            </h3>
                             <ol>
                                 <li>ダウンロード数が増やすことが最大の目的</li>
                                 <li>
@@ -77,7 +147,9 @@ const list = () => {
                             <p>
                                 上記、クライアントへ確認し得られた情報とする。
                             </p>
-                            <h3>提案書</h3>
+                            <h3>
+                                <span>提案書</span>
+                            </h3>
                             <strong>
                                 <span>
                                     結論：「便利でリスクがないから使いましょう」という内容で訴求する。
@@ -87,14 +159,18 @@ const list = () => {
                             <p>
                                 KOMAMEを使うにあたり「障害となるものは無く、メリットしかない」とユーザーの物差しで判断してもらうことでダウンロードにつなげる。
                             </p>
-                            <h3>背景/目的</h3>
+                            <h3>
+                                <span>背景/目的</span>
+                            </h3>
                             <p>
                                 現状ECサイトからコーヒー豆の定期便を買うにあたり不便なところは、次の買うタイミングの通知はないので本人が判断。余っていても次が届く。違う豆を購入する際は今の豆を削除し新しい豆を選んで買って再設定が必要。
                             </p>
                             <p>
                                 アプリであれば豆はスマホから選ぶだけ。決済方法は変更がなければ変える必要もなし。通知があることで身近な存在になれる。
                             </p>
-                            <h3>ターゲット/ターゲットの事情</h3>
+                            <h3>
+                                <span>ターゲット/ターゲットの事情</span>
+                            </h3>
                             <p>
                                 ターゲット層が30代から50代の男女（コア層は30-40代かも）とのことだったが、もっと詳細に挙げると下記を想定。
                             </p>
@@ -118,7 +194,9 @@ const list = () => {
                             <p>
                                 つまり、コーヒーがおいしいのは前提。便利で手間が省けて、豆の保証も付いていることでこのサービスを使う価値があると思わせる必要がある。
                             </p>
-                            <h3>市場背景の整理</h3>
+                            <h3>
+                                <span>市場背景の整理</span>
+                            </h3>
                             <p>現在の主なコーヒー豆の買い方</p>
                             <ol>
                                 <li>焙煎屋から直購入（店舗or通販）</li>
@@ -128,14 +206,18 @@ const list = () => {
                             <p>
                                 あくまでも基本はユーザーが豆を買うと決意してアクションを起こして購入に至るケースが主流。
                             </p>
-                            <h3>求められている/ニーズ</h3>
+                            <h3>
+                                <span>求められている/ニーズ</span>
+                            </h3>
                             <p>
                                 上にあるように豆の購入はユーザーが自主的に買うことが前提。そのためアプリ側から豆の購入や通知など能動的にユーザーにアプローチすることでユーザーの負担が減り、便利であると感じることができる。
                             </p>
                             <p>
                                 通知きたけど、もう豆がなくなるころだっけ？新しい豆が入った？この豆売れてますランキング？などの情報が待ってるだけで届き、ユーザーが受け身でいられる。
                             </p>
-                            <h3>具体的戦略</h3>
+                            <h3>
+                                <span>具体的戦略</span>
+                            </h3>
                             <ol>
                                 <li>
                                     KOMAMEがどういうサービスかわかりやすくシンプルに説明。
@@ -146,9 +228,13 @@ const list = () => {
                             <p>
                                 ページの離脱率を考慮し上から優先順位の高い内容から説明。離脱せず、使うことに踏み切れず画面をスクロースするユーザーにデメリットがないことを最後に説明し、「総合的に判断しメリットが多いからダウンロードする」という方向へと誘導する。
                             </p>
-                            <h3>デザインカンプ</h3>
+                            <h3>
+                                <span>デザインカンプ</span>
+                            </h3>
 
-                            <h3>おわりに</h3>
+                            <h3>
+                                <span>おわりに</span>
+                            </h3>
                             <p>
                                 上記の内容で、仮想案件としてLPデザイン制作を行いました。アプリをダウンロードすることを考慮し、SP画面で見られることが多いことを想定。画面は見やすく、シンプルに、長すぎないということを意識しました。最後までご覧いただきありがとうございました。
                             </p>
