@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography"
 import Image from "next/image"
 import { css } from "@emotion/react"
 import { makeStyles } from "@material-ui/core"
+import Link from "next/link"
 
 const headerAreaDetail = css({
     backgroundColor: "transparent",
@@ -40,7 +41,9 @@ function Header() {
                         sx={{ flexGrow: 1, marginLeft: 2 }}
                         color="secondary"
                     >
-                        <a href="/">Portfolio</a>
+                        <Link href="/">
+                            <a>Portfolio</a>
+                        </Link>
                     </Typography>
                 </Toolbar>
             </div>

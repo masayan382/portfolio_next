@@ -20,12 +20,12 @@ const Slider: React.FC = () => {
     const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
     const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
 
-    useEffect(() => {
-        return () => {
-            let nextBtn: any = document.querySelector<HTMLElement>(".nextBtn")
-            nextBtn.classList.add("swiper-button-disabled")
-        }
-    }, [])
+    // useEffect(() => {
+    //     return () => {
+    //         let nextBtn: any = document.querySelector<HTMLElement>(".nextBtn")
+    //         nextBtn.classList.add("swiper-button-disabled")
+    //     }
+    // }, [])
     return (
         <div
             style={{ position: "relative", width: "100vw", height: "100vh" }}

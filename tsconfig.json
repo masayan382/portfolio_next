@@ -25,7 +25,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/api/mail.js",
-    "slides/css.js"
+    "slides/css.js",
+    "components/ArticleCss.js"
   ],
   "exclude": [
     "node_modules"
