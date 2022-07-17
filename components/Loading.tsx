@@ -41,8 +41,8 @@ const loadingContent = css`
     margin: -85px 0 0 -85px;
     border: 3px solid #f00;
     border: 3px solid transparent;
-    border-top-color: #4d658d;
-    border-bottom-color: #4d658d;
+    border-top-color: #0179ad;
+    border-bottom-color: #0179ad;
     border-radius: 50%;
     animation: ${loader} 2s linear infinite;
     &:after {
@@ -54,8 +54,8 @@ const loadingContent = css`
         top: 15px;
         bottom: 15px;
         border: 3px solid transparent;
-        border-top-color: #84417c;
-        border-bottom-color: #84417c;
+        border-top-color: #df2353;
+        border-bottom-color: #df2353;
         border-radius: 50%;
         animation: ${loader} 1.5s linear infinite;
     }
@@ -68,8 +68,8 @@ const loadingContent = css`
         top: 5px;
         bottom: 5px;
         border: 3px solid transparent;
-        border-top-color: #d4cc6a;
-        border-bottom-color: #d4cc6a;
+        border-top-color: #fed900;
+        border-bottom-color: #fed900;
         border-radius: 50%;
         animation: ${loader} 3s linear infinite;
     }

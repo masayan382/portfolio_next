@@ -39,7 +39,7 @@ const ToTop: React.FC = () => {
                 swiper.slideTo(0)
             }}
         >
-            <Fab size="medium" color="primary">
+            <Fab size="small" style={{ background: "#F7A500" }}>
                 <KeyboardArrowUpIcon />
             </Fab>
         </div>
