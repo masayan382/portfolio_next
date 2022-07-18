@@ -55,7 +55,7 @@ const paperArea = css({
         letterSpacing: "0.05em",
     },
     [mq[2]]: {
-        padding: "24px 40px 64px",
+        padding: "24px 24px 64px",
     },
 })
 
@@ -102,7 +102,7 @@ const list: React.FC = (data: any) => {
                     flexGrow: 1,
                     margin: "40px auto 0 auto",
                     paddingBottom: 12,
-                    maxWidth: "1280px",
+                    maxWidth: "1360px",
                 }}
             >
                 <Grid
@@ -119,14 +119,22 @@ const list: React.FC = (data: any) => {
                             </h2>
                             <section>
                                 <h3>DESIGN</h3>
-                                <div>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        flexWrap: "wrap",
+                                        justifyContent: "space-around",
+                                        p: 1,
+                                        m: 1,
+                                    }}
+                                >
                                     {data.cardWorks.map(
                                         (cardWork: any, index: number) => {
                                             return (
-                                                <ul>
-                                                    <li key={index}>
-                                                        {cardWork.category ===
-                                                        "design" ? (
+                                                <div key={index}>
+                                                    {cardWork.category ===
+                                                    "design" ? (
+                                                        <Grid>
                                                             <Cardbord
                                                                 title={
                                                                     cardWork.title
@@ -150,15 +158,15 @@ const list: React.FC = (data: any) => {
                                                                     cardWork.git
                                                                 }
                                                             />
-                                                        ) : (
-                                                            ""
-                                                        )}
-                                                    </li>
-                                                </ul>
+                                                        </Grid>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </div>
                                             )
                                         }
                                     )}
-                                </div>
+                                </Box>
                             </section>
 
                             {/* <h3>WEB SITE</h3>

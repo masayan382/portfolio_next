@@ -22,11 +22,11 @@ const cardTable = css({
         textAlign: "left",
         verticalAlign: "top",
         paddingRight: "8px",
-        fontSize: "12px",
+        fontSize: "14px",
         fontWeight: "normal",
     },
     "tr > td": {
-        fontSize: "12px",
+        fontSize: "14px",
         verticalAlign: "top",
     },
 })
@@ -45,7 +45,14 @@ type cardData = {
 
 const Cardbord: React.FC<cardData> = (props) => {
     return (
-        <Box sx={{ boxShadow: 5 }}>
+        <Box
+            sx={{
+                boxShadow: 5,
+                margin: "16px 0",
+                maxWidth: "384px",
+                maxHeight: "500px",
+            }}
+        >
             <Card>
                 <CardHeader title={props.title} />
                 <CardMedia
@@ -55,7 +62,7 @@ const Cardbord: React.FC<cardData> = (props) => {
                     alt={props.title}
                 />
                 <CardContent>
-                    <table>
+                    <table css={cardTable}>
                         <thead></thead>
                         <tbody>
                             <tr>
