@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const ScrollToTop: React.FC = (props: any) => {
+const ScrollToTop: React.FC = () => {
     const classes = useStyles()
     const trigger = useScrollTrigger()
 
@@ -44,10 +44,6 @@ const ScrollToTop: React.FC = (props: any) => {
             </div>
         </Zoom>
     )
-}
-
-ScrollToTop.propTypes = {
-    children: PropTypes.element.isRequired,
 }
 
 export default ScrollToTop
