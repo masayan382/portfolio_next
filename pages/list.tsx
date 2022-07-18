@@ -8,6 +8,10 @@ import ScrollToTop from "../components/ScrollToTop"
 import Image from "next/image"
 import { mq } from "../slides/css"
 import Cardbord from "../components/Cardbord"
+import React, { useEffect } from "react"
+import Link from "next/link"
+import cardWorks from "../data/data"
+import type { NextPage } from "next"
 
 const contentsBase = css({
     backgroundImage:
@@ -57,7 +61,39 @@ const paperArea = css({
 
 const imgBox = css({ filter: "drop-shadow(0px 0px 16px rgba(0,0,0,0.6))" })
 
-const list = () => {
+type cardData = {
+    id: string
+    category: string
+    title: string
+    img: string
+    overview: string
+    date: string
+    skill: string
+    url?: string
+    git?: string
+}
+
+type cardList = {
+    cards: cardData[]
+}
+
+export async function getStaticProps() {
+    // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+    // const res = await fetch("/data.json")
+    // const allData = await res.json()
+    return {
+        props: {
+            cardWorks,
+        },
+    }
+}
+
+const list: React.FC = (data: any) => {
+    useEffect(() => {
+        return () => {
+            console.log(data)
+        }
+    }, [])
     return (
         <div css={contentsBase}>
             <AppBarArticle />
@@ -82,13 +118,21 @@ const list = () => {
                                 <span>WORKS LIST</span>
                             </h2>
                             <h3>DESIGN</h3>
+                            {data.cardWorks.map((cardWork: any) => {
+                                return (
+                                    <>
+                                        <p>{cardWork.category}</p>
+                                        <p>{cardWork.title}</p>
+                                    </>
+                                )
+                            })}
                             <Cardbord />
-                            <h3>WEB SITE</h3>
+                            {/* <h3>WEB SITE</h3>
                             <Cardbord />
                             <h3>PROTOTYPE</h3>
                             <Cardbord />
                             <h3>FRAMEWORK</h3>
-                            <Cardbord />
+                            <Cardbord /> */}
                         </Paper>
                     </Grid>
                 </Grid>
