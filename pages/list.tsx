@@ -112,38 +112,54 @@ const list: React.FC = (data: any) => {
                     alignItems="center"
                     textAlign="center"
                 >
-                    <Grid item xs={10}>
+                    <Grid item xs={12}>
                         <Paper elevation={3} css={paperArea}>
                             <h2 id="title" style={{ textAlign: "center" }}>
                                 <span>WORKS LIST</span>
                             </h2>
-                            <h3>DESIGN</h3>
-                            {data.cardWorks.map(
-                                (cardWork: any, index: number) => {
-                                    return (
-                                        <ul>
-                                            <li key={index}>
-                                                {cardWork.category ===
-                                                "design" ? (
-                                                    <Cardbord
-                                                        title={cardWork.title}
-                                                        img={cardWork.img}
-                                                        overview={
-                                                            cardWork.overview
-                                                        }
-                                                        date={cardWork.date}
-                                                        skill={cardWork.skill}
-                                                        url={cardWork.url}
-                                                        git={cardWork.git}
-                                                    />
-                                                ) : (
-                                                    ""
-                                                )}
-                                            </li>
-                                        </ul>
-                                    )
-                                }
-                            )}
+                            <section>
+                                <h3>DESIGN</h3>
+                                <div>
+                                    {data.cardWorks.map(
+                                        (cardWork: any, index: number) => {
+                                            return (
+                                                <ul>
+                                                    <li key={index}>
+                                                        {cardWork.category ===
+                                                        "design" ? (
+                                                            <Cardbord
+                                                                title={
+                                                                    cardWork.title
+                                                                }
+                                                                img={
+                                                                    cardWork.img
+                                                                }
+                                                                overview={
+                                                                    cardWork.overview
+                                                                }
+                                                                date={
+                                                                    cardWork.date
+                                                                }
+                                                                skill={
+                                                                    cardWork.skill
+                                                                }
+                                                                url={
+                                                                    cardWork.url
+                                                                }
+                                                                git={
+                                                                    cardWork.git
+                                                                }
+                                                            />
+                                                        ) : (
+                                                            ""
+                                                        )}
+                                                    </li>
+                                                </ul>
+                                            )
+                                        }
+                                    )}
+                                </div>
+                            </section>
 
                             {/* <h3>WEB SITE</h3>
                             <Cardbord />
