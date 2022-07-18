@@ -33,7 +33,7 @@ const WeatherBudda: React.FC = () => {
     return (
         <Box sx={{ boxShadow: 5 }}>
             <Card sx={{ maxWidth: 345 }}>
-                <CardHeader title="WeatherBudda" />
+                <CardHeader title="大仏天気" />
                 <CardMedia
                     component="img"
                     height="194"

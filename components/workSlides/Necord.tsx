@@ -47,7 +47,7 @@ const Necord: React.FC = () => {
                             <tr>
                                 <th>概要</th>
                                 <td>
-                                    愛猫の成長をrecordするカレンダーアプリ。CRUD機能あり。
+                                    愛猫の成長をrecordするカレンダーアプリ。jQueryライブラリよりFullCalendarを使用。非同期通信でCRUD機能あり。
                                 </td>
                             </tr>
                             <tr>

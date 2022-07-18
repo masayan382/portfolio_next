@@ -48,7 +48,7 @@ const Reactter: React.FC = () => {
                                 <th>概要</th>
                                 <td>
                                     React.js ✕
-                                    Firebaseで作ったReactter。選択された答えに自動対応します。バリデーション機能あり。
+                                    Typescriptで作成した「つぶやきアプリ」。テキスト＆画像のCRUD機能あり。データベースにはFirebaseを採用。
                                 </td>
                             </tr>
                             <tr>
@@ -58,7 +58,7 @@ const Reactter: React.FC = () => {
                             <tr>
                                 <th>使用技術</th>
                                 <td>
-                                    React.js、React Hooks、Material-UI、Firebase
+                                    React.js、React-Hooks、Material-UI、Firebase
                                 </td>
                             </tr>
                         </tbody>

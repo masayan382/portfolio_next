@@ -58,8 +58,7 @@ const Monoqlo: React.FC = () => {
                             <tr>
                                 <th>使用技術</th>
                                 <td>
-                                    React.js、React
-                                    redux、React、Hooks、Material-UI、Firebase
+                                    React.js、React-redux、React-Hooks、Material-UI、Firebase
                                 </td>
                             </tr>
                         </tbody>

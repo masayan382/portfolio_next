@@ -48,8 +48,7 @@ const BbsVue: React.FC = () => {
                             <tr>
                                 <th>概要</th>
                                 <td>
-                                    Vue.js
-                                    ✕Firebaseで作成した掲示板。axiosにて非同期通信。ログイン・ログアウト・refreshtoken機能あり。
+                                    Vue.js✕Firebaseで作成した掲示板。axiosにて非同期通信。ログイン・ログアウト・refreshtoken機能あり。
                                 </td>
                             </tr>
                             <tr>

@@ -47,8 +47,8 @@ const TodoNext: React.FC = () => {
                             <tr>
                                 <th>概要</th>
                                 <td>
-                                    Next.js ✕
-                                    GraphQLで作製したSSG+ISR対応のtodoリスト
+                                    Next.js
+                                    ✕GraphQLで作製したSSG+ISR対応のtodoリスト。
                                 </td>
                             </tr>
                             <tr>
@@ -58,8 +58,7 @@ const TodoNext: React.FC = () => {
                             <tr>
                                 <th>使用技術</th>
                                 <td>
-                                    Next.js、tailwindCSS、GraphQL、Firebase、Auth、react-query、redux-toolkit、Hasura
-                                    server、Vercel
+                                    Next.js、tailwindCSS、GraphQL、Firebase、Auth、react-query、redux-toolkit、Hasura、server、Vercel
                                 </td>
                             </tr>
                         </tbody>

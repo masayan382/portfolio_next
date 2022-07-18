@@ -48,7 +48,7 @@ const HooksCalendar: React.FC = () => {
                                 <th>概要</th>
                                 <td>
                                     React.js ✕
-                                    Firebaseで作ったHooksCalendar。選択された答えに自動対応します。バリデーション機能あり。
+                                    Dayjsで作成したカレンダーアプリ。CRUD機能実装。データベースはFirebaseを採用。
                                 </td>
                             </tr>
                             <tr>
@@ -58,7 +58,7 @@ const HooksCalendar: React.FC = () => {
                             <tr>
                                 <th>使用技術</th>
                                 <td>
-                                    React.js、React Hooks、Material-UI、Firebase
+                                    React.js、ReactｰHooks、Material-UI、Firebase
                                 </td>
                             </tr>
                         </tbody>
