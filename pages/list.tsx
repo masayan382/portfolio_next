@@ -118,15 +118,33 @@ const list: React.FC = (data: any) => {
                                 <span>WORKS LIST</span>
                             </h2>
                             <h3>DESIGN</h3>
-                            {data.cardWorks.map((cardWork: any) => {
-                                return (
-                                    <>
-                                        <p>{cardWork.category}</p>
-                                        <p>{cardWork.title}</p>
-                                    </>
-                                )
-                            })}
-                            <Cardbord />
+                            {data.cardWorks.map(
+                                (cardWork: any, index: number) => {
+                                    return (
+                                        <ul>
+                                            <li key={index}>
+                                                {cardWork.category ===
+                                                "design" ? (
+                                                    <Cardbord
+                                                        title={cardWork.title}
+                                                        img={cardWork.img}
+                                                        overview={
+                                                            cardWork.overview
+                                                        }
+                                                        date={cardWork.date}
+                                                        skill={cardWork.skill}
+                                                        url={cardWork.url}
+                                                        git={cardWork.git}
+                                                    />
+                                                ) : (
+                                                    ""
+                                                )}
+                                            </li>
+                                        </ul>
+                                    )
+                                }
+                            )}
+
                             {/* <h3>WEB SITE</h3>
                             <Cardbord />
                             <h3>PROTOTYPE</h3>
