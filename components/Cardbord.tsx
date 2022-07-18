@@ -81,7 +81,7 @@ const Cardbord: React.FC<cardData> = (props) => {
                     </table>
                 </CardContent>
                 <div className="iconLink">
-                    <CardActions disableSpacing>
+                    <CardActions style={{ padding: "0 16px 0 16px" }}>
                         {props.url ? (
                             <Tooltip title="WEBサイトへ" placement="top">
                                 <Link
