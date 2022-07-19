@@ -131,11 +131,12 @@ const list: React.FC = (data: any) => {
                                     {data.cardWorks.map(
                                         (cardWork: any, index: number) => {
                                             return (
-                                                <div key={index}>
+                                                <>
                                                     {cardWork.category ===
                                                     "design" ? (
                                                         <Grid>
                                                             <Cardbord
+                                                                key={index}
                                                                 title={
                                                                     cardWork.title
                                                                 }
@@ -162,7 +163,166 @@ const list: React.FC = (data: any) => {
                                                     ) : (
                                                         ""
                                                     )}
-                                                </div>
+                                                </>
+                                            )
+                                        }
+                                    )}
+                                </Box>
+                            </section>
+
+                            <section>
+                                <h3>WEB SITE</h3>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        flexWrap: "wrap",
+                                        justifyContent: "space-around",
+                                        p: 1,
+                                        m: 1,
+                                    }}
+                                >
+                                    {data.cardWorks.map(
+                                        (cardWork: any, index: number) => {
+                                            return (
+                                                <>
+                                                    {cardWork.category ===
+                                                    "site" ? (
+                                                        <Grid>
+                                                            <Cardbord
+                                                                key={index}
+                                                                title={
+                                                                    cardWork.title
+                                                                }
+                                                                img={
+                                                                    cardWork.img
+                                                                }
+                                                                overview={
+                                                                    cardWork.overview
+                                                                }
+                                                                date={
+                                                                    cardWork.date
+                                                                }
+                                                                skill={
+                                                                    cardWork.skill
+                                                                }
+                                                                url={
+                                                                    cardWork.url
+                                                                }
+                                                                git={
+                                                                    cardWork.git
+                                                                }
+                                                            />
+                                                        </Grid>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </>
+                                            )
+                                        }
+                                    )}
+                                </Box>
+                            </section>
+
+                            <section>
+                                <h3>PROTOTYPE</h3>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        flexWrap: "wrap",
+                                        justifyContent: "space-around",
+                                        p: 1,
+                                        m: 1,
+                                    }}
+                                >
+                                    {data.cardWorks.map(
+                                        (cardWork: any, index: number) => {
+                                            return (
+                                                <>
+                                                    {cardWork.category ===
+                                                    "prototype" ? (
+                                                        <Grid>
+                                                            <Cardbord
+                                                                key={index}
+                                                                title={
+                                                                    cardWork.title
+                                                                }
+                                                                img={
+                                                                    cardWork.img
+                                                                }
+                                                                overview={
+                                                                    cardWork.overview
+                                                                }
+                                                                date={
+                                                                    cardWork.date
+                                                                }
+                                                                skill={
+                                                                    cardWork.skill
+                                                                }
+                                                                url={
+                                                                    cardWork.url
+                                                                }
+                                                                git={
+                                                                    cardWork.git
+                                                                }
+                                                            />
+                                                        </Grid>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </>
+                                            )
+                                        }
+                                    )}
+                                </Box>
+                            </section>
+
+                            <section>
+                                <h3>FRAMEWORK</h3>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        flexWrap: "wrap",
+                                        justifyContent: "space-around",
+                                        p: 1,
+                                        m: 1,
+                                    }}
+                                >
+                                    {data.cardWorks.map(
+                                        (cardWork: any, index: number) => {
+                                            return (
+                                                <>
+                                                    {cardWork.category ===
+                                                    "framework" ? (
+                                                        <Grid>
+                                                            <Cardbord
+                                                                key={index}
+                                                                title={
+                                                                    cardWork.title
+                                                                }
+                                                                img={
+                                                                    cardWork.img
+                                                                }
+                                                                overview={
+                                                                    cardWork.overview
+                                                                }
+                                                                date={
+                                                                    cardWork.date
+                                                                }
+                                                                skill={
+                                                                    cardWork.skill
+                                                                }
+                                                                url={
+                                                                    cardWork.url
+                                                                }
+                                                                git={
+                                                                    cardWork.git
+                                                                }
+                                                            />
+                                                        </Grid>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </>
                                             )
                                         }
                                     )}

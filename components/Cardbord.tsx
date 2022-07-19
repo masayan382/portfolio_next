@@ -58,7 +58,7 @@ const Cardbord: React.FC<cardData> = (props) => {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={props.img}
+                    image={props.img == "" ? "/no_image.jpg" : props.img}
                     alt={props.title}
                 />
                 <CardContent>
