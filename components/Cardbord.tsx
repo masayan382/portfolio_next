@@ -11,6 +11,7 @@ import Tooltip from "@mui/material/Tooltip"
 import Link from "@mui/material/Link"
 import { shadows } from "@mui/system"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 
 import { css } from "@mui/styled-engine"
 
@@ -80,40 +81,30 @@ const Cardbord: React.FC<cardData> = (props) => {
                         </tbody>
                     </table>
                 </CardContent>
-                <div className="iconLink">
-                    <CardActions style={{ padding: "0 16px 0 16px" }}>
-                        {props.url ? (
-                            <Tooltip title="WEBサイトへ" placement="top">
-                                <Link
-                                    href="https://masataka.site/barman/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <IconButton aria-label="site">
-                                        <WebIcon />
-                                    </IconButton>
-                                </Link>
-                            </Tooltip>
-                        ) : (
-                            ""
-                        )}
-                        {props.git ? (
-                            <Tooltip title="Githubへ" placement="top">
-                                <Link
-                                    href="https://masataka.site/barman/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <IconButton aria-label="github">
-                                        <GitHubIcon />
-                                    </IconButton>
-                                </Link>
-                            </Tooltip>
-                        ) : (
-                            ""
-                        )}
-                    </CardActions>
-                </div>
+                <CardActions style={{ padding: "0px 16px 16px 16px" }}>
+                    {props.url ? (
+                        <Link
+                            href="https://masataka.site/barman/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button size="large">WEBページへ</Button>
+                        </Link>
+                    ) : (
+                        ""
+                    )}
+                    {props.git ? (
+                        <Link
+                            href="https://masataka.site/barman/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button size="large">Githubへ</Button>
+                        </Link>
+                    ) : (
+                        ""
+                    )}
+                </CardActions>
             </Card>
         </Box>
     )
