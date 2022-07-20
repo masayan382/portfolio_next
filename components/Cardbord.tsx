@@ -18,14 +18,12 @@ import Link from "next/link"
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: "4px 6px",
-        color: "rgba(169, 201, 255, 1)",
+        color: "rgb(33, 150, 243)",
         textDecoration: "none",
         display: "flex",
         "&:hover": {
-            backgroundImage:
-                "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+            backgroundColor: "rgba(33, 150, 243, 0.06)",
             borderRadius: "4px",
-            color: "white",
             textDecoration: "none",
         },
         Link: {
