@@ -8,12 +8,31 @@ import IconButton from "@mui/material/IconButton"
 import WebIcon from "@mui/icons-material/Web"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import Tooltip from "@mui/material/Tooltip"
-import Link from "@mui/material/Link"
 import { shadows } from "@mui/system"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
-
 import { css } from "@mui/styled-engine"
+import { makeStyles } from "@material-ui/core"
+import Link from "next/link"
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: "4px 6px",
+        color: "rgba(169, 201, 255, 1)",
+        textDecoration: "none",
+        display: "flex",
+        "&:hover": {
+            backgroundImage:
+                "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+            borderRadius: "4px",
+            color: "white",
+            textDecoration: "none",
+        },
+        Link: {
+            underline: "none",
+        },
+    },
+}))
 
 const cardTable = css({
     width: "100%",
@@ -45,6 +64,7 @@ type cardData = {
 }
 
 const Cardbord: React.FC<cardData> = (props) => {
+    const classes = useStyles()
     return (
         <Box
             sx={{
@@ -81,25 +101,40 @@ const Cardbord: React.FC<cardData> = (props) => {
                         </tbody>
                     </table>
                 </CardContent>
-                <CardActions style={{ padding: "0px 16px 16px 16px" }}>
+                <CardActions
+                    style={{
+                        padding: "0px 16px 8px 16px",
+                    }}
+                >
                     {props.url ? (
                         <Link
-                            href="https://masataka.site/barman/"
+                            href={props.url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            className={classes.root}
                         >
-                            <Button size="large">WEBページへ</Button>
+                            <Button size="large" className={classes.root}>
+                                <a
+                                    style={{
+                                        background: "none",
+                                    }}
+                                >
+                                    WEBページへ
+                                </a>
+                            </Button>
                         </Link>
                     ) : (
                         ""
                     )}
                     {props.git ? (
                         <Link
-                            href="https://masataka.site/barman/"
+                            href={props.git}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Button size="large">Githubへ</Button>
+                            <Button size="large" className={classes.root}>
+                                <a>Githubへ</a>
+                            </Button>
                         </Link>
                     ) : (
                         ""
