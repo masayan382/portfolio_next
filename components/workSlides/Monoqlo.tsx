@@ -80,7 +80,11 @@ const Monoqlo: React.FC = () => {
                         </tbody>
                     </table>
                 </CardContent>
-                <CardActions disableSpacing>
+                <CardActions
+                    style={{
+                        padding: "0px 14px 8px 14px",
+                    }}
+                >
                     <Link
                         href="https://masataka.site/monoqlo/"
                         target="_blank"

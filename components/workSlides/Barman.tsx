@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
 const Barman: React.FC = () => {
     const classes = useStyles()
     return (
-        <Box sx={{ boxShadow: 5 }}>
-            <Card sx={{ maxWidth: 345, height: 465 }}>
+        <Box>
+            <Card sx={{ maxWidth: 345, height: 440 }}>
                 <CardHeader title="Barman" />
                 <CardMedia
                     component="img"
@@ -80,7 +80,7 @@ const Barman: React.FC = () => {
                 <div className="iconLink">
                     <CardActions
                         style={{
-                            padding: "0px 16px 8px 16px",
+                            padding: "0px 14px 8px 14px",
                         }}
                     >
                         <Link

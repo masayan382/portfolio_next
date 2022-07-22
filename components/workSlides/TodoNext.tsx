@@ -80,7 +80,11 @@ const TodoNext: React.FC = () => {
                         </tbody>
                     </table>
                 </CardContent>
-                <CardActions disableSpacing>
+                <CardActions
+                    style={{
+                        padding: "0px 14px 8px 14px",
+                    }}
+                >
                     <Link
                         href="https://hasura-firebase.vercel.app/"
                         target="_blank"
