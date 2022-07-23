@@ -52,7 +52,6 @@ const sliderContainer = css({
     },
     width: "calc(100%-96px)",
     height: "100%",
-    // padding: "98px 80px 56px 96px",
     margin: "0",
     color: "#fff",
     textShadow: "1px 0 5px black",

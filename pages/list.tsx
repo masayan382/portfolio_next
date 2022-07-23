@@ -5,13 +5,11 @@ import { css } from "@mui/styled-engine"
 import AppBarArticle from "../components/AppBarArticle"
 import FooterArticle from "../components/FooterArticle"
 import ScrollToTop from "../components/ScrollToTop"
-import Image from "next/image"
 import { mq } from "../slides/css"
 import Cardbord from "../components/Cardbord"
 import React, { useEffect } from "react"
 import Link from "next/link"
 import cardWorks from "../data/data"
-import type { NextPage } from "next"
 
 const contentsBase = css({
     backgroundImage:
@@ -36,8 +34,8 @@ const contentsBase = css({
                     bottom: "-16%",
                     width: "100%",
                     height: "6px",
-                    background:
-                        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+                    backgroundImage:
+                        "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
                 },
                 [mq[2]]: {
                     left: "-2%",
@@ -113,7 +111,7 @@ const list: React.FC = (data: any) => {
                     textAlign="center"
                 >
                     <Grid item xs={12}>
-                        <Paper elevation={3} css={paperArea}>
+                        <Paper elevation={0} css={paperArea}>
                             <h2 id="title" style={{ textAlign: "center" }}>
                                 <span>WORKS LIST</span>
                             </h2>
@@ -328,13 +326,6 @@ const list: React.FC = (data: any) => {
                                     )}
                                 </Box>
                             </section>
-
-                            {/* <h3>WEB SITE</h3>
-                            <Cardbord />
-                            <h3>PROTOTYPE</h3>
-                            <Cardbord />
-                            <h3>FRAMEWORK</h3>
-                            <Cardbord /> */}
                         </Paper>
                     </Grid>
                 </Grid>

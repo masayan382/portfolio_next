@@ -1,8 +1,6 @@
 import React from "react"
-import Image from "next/image"
 import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
-import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import { mq } from "./css"
 

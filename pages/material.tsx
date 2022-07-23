@@ -1,4 +1,3 @@
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Box from "@mui/material/Box"
 import Paper from "@mui/material/Paper"
 import Grid from "@mui/material/Grid"
@@ -93,7 +92,6 @@ const contentsBase = css({
             padding: "0.5em 0.5em 0.5em 1.8em",
             borderRadius: "2px",
             "&:before": {
-                // fontFamily: "Font Awesome 5 Free",
                 content: "url(/design/check.png)",
                 width: "28px",
                 height: "28px",

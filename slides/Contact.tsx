@@ -1,14 +1,10 @@
 import React from "react"
-import Image from "next/image"
 import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
-import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import MailForm from "../pages/MailForm"
 import { mq } from "./css"
 import ToTop from "../components/ToTop"
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
-import { positions } from "@mui/system"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -19,7 +15,6 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const bottomBg = css({
-    // backgroundImage: "url('/img/box.jpg')",
     backgroundImage:
         "linear-gradient(120deg, rgba(169, 201, 255, 1) 55%, rgba(251, 187, 236, 1) 98%)",
     height: "100vh",

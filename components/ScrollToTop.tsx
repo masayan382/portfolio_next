@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Zoom, useScrollTrigger, makeStyles, Fab } from "@material-ui/core"
 import { KeyboardArrowUp } from "@material-ui/icons"
 
@@ -34,7 +33,6 @@ const ScrollToTop: React.FC = () => {
                 style={{ zIndex: "100" }}
             >
                 <Fab
-                    // color="primary"
                     size="small"
                     aria-label="scroll back to top"
                     style={{ background: "#F7A500" }}
