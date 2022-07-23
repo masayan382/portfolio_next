@@ -85,7 +85,7 @@ export async function getStaticProps() {
     }
 }
 
-const list: React.FC = memo((data: any) => {
+const list: React.FC = (data: any) => {
     const allData = data
     const designData = allData.cardWorks.filter(function (data: any) {
         return data.category == "design"
@@ -99,7 +99,6 @@ const list: React.FC = memo((data: any) => {
     const frameworkData = allData.cardWorks.filter(function (data: any) {
         return data.category == "framework"
     })
-
     return (
         <div css={contentsBase}>
             <AppBarArticle />
@@ -262,6 +261,6 @@ const list: React.FC = memo((data: any) => {
             <FooterArticle />
         </div>
     )
-})
+}
 
 export default list
