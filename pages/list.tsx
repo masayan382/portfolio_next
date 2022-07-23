@@ -7,7 +7,7 @@ import FooterArticle from "../components/FooterArticle"
 import ScrollToTop from "../components/ScrollToTop"
 import { mq } from "../slides/css"
 import Cardbord from "../components/Cardbord"
-import React, { useEffect } from "react"
+import React, { memo } from "react"
 import Link from "next/link"
 import cardWorks from "../data/data"
 
@@ -86,12 +86,7 @@ export async function getStaticProps() {
     }
 }
 
-const list: React.FC = (data: any) => {
-    useEffect(() => {
-        return () => {
-            console.log(data)
-        }
-    }, [])
+const list: React.FC = memo((data: any) => {
     return (
         <div css={contentsBase}>
             <AppBarArticle />
@@ -334,6 +329,6 @@ const list: React.FC = (data: any) => {
             <ScrollToTop />
         </div>
     )
-}
+})
 
 export default list

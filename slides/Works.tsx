@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
@@ -128,7 +128,7 @@ const listBtn = css({
 
 SwiperCore.use([Pagination, Autoplay, Navigation])
 
-const Works: React.FC = () => {
+const Works: React.FC = memo(() => {
     const classes = useStyles()
     return (
         <div css={bottomBg}>
@@ -240,6 +240,6 @@ const Works: React.FC = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Works
