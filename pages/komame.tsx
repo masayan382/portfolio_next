@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid"
 import { css } from "@mui/styled-engine"
 import AppBarArticle from "../components/AppBarArticle"
 import FooterArticle from "../components/FooterArticle"
-import ScrollToTop from "../components/ScrollToTop"
+import ReturnTopButton from "../components/ReturnTopButton"
 import Image from "next/image"
 import { mq } from "../slides/css"
 
@@ -293,8 +293,8 @@ const list = () => {
                     </Grid>
                 </Grid>
             </Box>
+            <ReturnTopButton />
             <FooterArticle />
-            <ScrollToTop />
         </div>
     )
 }
