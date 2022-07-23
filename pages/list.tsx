@@ -127,32 +127,33 @@ const list: React.FC = memo((data: any) => {
                                                 <>
                                                     {cardWork.category ===
                                                     "design" ? (
-                                                        <Grid>
-                                                            <Cardbord
-                                                                key={index}
-                                                                title={
-                                                                    cardWork.title
-                                                                }
-                                                                img={
-                                                                    cardWork.img
-                                                                }
-                                                                overview={
-                                                                    cardWork.overview
-                                                                }
-                                                                date={
-                                                                    cardWork.date
-                                                                }
-                                                                skill={
-                                                                    cardWork.skill
-                                                                }
-                                                                url={
-                                                                    cardWork.url
-                                                                }
-                                                                git={
-                                                                    cardWork.git
-                                                                }
-                                                            />
-                                                        </Grid>
+                                                        <div key={index}>
+                                                            <Grid>
+                                                                <Cardbord
+                                                                    title={
+                                                                        cardWork.title
+                                                                    }
+                                                                    img={
+                                                                        cardWork.img
+                                                                    }
+                                                                    overview={
+                                                                        cardWork.overview
+                                                                    }
+                                                                    date={
+                                                                        cardWork.date
+                                                                    }
+                                                                    skill={
+                                                                        cardWork.skill
+                                                                    }
+                                                                    url={
+                                                                        cardWork.url
+                                                                    }
+                                                                    git={
+                                                                        cardWork.git
+                                                                    }
+                                                                />
+                                                            </Grid>
+                                                        </div>
                                                     ) : (
                                                         ""
                                                     )}

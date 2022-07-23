@@ -138,7 +138,7 @@ const list = () => {
                 >
                     <Grid item xs={10}>
                         <Paper
-                            elevation={3}
+                            elevation={0}
                             //
                             css={paperArea}
                         >
