@@ -57,7 +57,7 @@ const ReturnTopButton = () => {
             <Fab
                 size="small"
                 aria-label="scroll back to top"
-                style={{ background: "#F7A500", zIndex: "110" }}
+                style={{ background: "rgba(250,218,65,1)", zIndex: "110" }}
             >
                 <KeyboardArrowUp />
             </Fab>

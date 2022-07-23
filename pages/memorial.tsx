@@ -7,6 +7,7 @@ import FooterArticle from "../components/FooterArticle"
 import ReturnTopButton from "../components/ReturnTopButton"
 import Image from "next/image"
 import { mq } from "../slides/css"
+import WorkListBack from "../components/WorkListBack"
 
 const contentsBase = css({
     backgroundImage:
@@ -298,6 +299,7 @@ const list = () => {
                             </p>
                         </Paper>
                     </Grid>
+                    <WorkListBack />
                 </Grid>
             </Box>
             <ReturnTopButton />
