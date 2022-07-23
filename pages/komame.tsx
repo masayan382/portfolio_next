@@ -292,8 +292,8 @@ const list = () => {
                             </p>
                         </Paper>
                     </Grid>
-                    <WorkListBack />
                 </Grid>
+                <WorkListBack />
             </Box>
             <ReturnTopButton />
             <FooterArticle />
