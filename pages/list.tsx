@@ -15,7 +15,7 @@ import type { NextPage } from "next"
 
 const contentsBase = css({
     backgroundImage:
-        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+        "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
     width: "100%",
     height: "100%",
     color: "#333",

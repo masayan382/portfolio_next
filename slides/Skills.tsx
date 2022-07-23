@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const bottomBg = css({
     backgroundImage:
-        "linear-gradient(90deg, rgba(132, 250, 177, 1) 45%, rgba(143, 213, 241, 1))",
+        "linear-gradient(120deg, rgba(169, 201, 255, 1) 55%, rgba(251, 187, 236, 1) 98%)",
     height: "100vh",
     width: "100vw",
     backgroundRepeat: "no-repeat",

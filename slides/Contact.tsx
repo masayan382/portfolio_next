@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const bottomBg = css({
     // backgroundImage: "url('/img/box.jpg')",
     backgroundImage:
-        "linear-gradient(90deg, rgba(185, 226, 239, 1) 45%, rgba(217, 184, 223, 1))",
+        "linear-gradient(120deg, rgba(169, 201, 255, 1) 55%, rgba(251, 187, 236, 1) 98%)",
     height: "100vh",
     width: "100vw",
     backgroundRepeat: "no-repeat",

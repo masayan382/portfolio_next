@@ -158,11 +158,11 @@ const MailForm: NextPage = () => {
                         variant="contained"
                         sx={{
                             color: "#333",
-                            background:
-                                "linear-gradient(90deg, rgba(185, 226, 239, 1) , rgba(217, 184, 223, 1))",
+                            backgroundImage:
+                                "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
                             ":hover": {
-                                background:
-                                    "linear-gradient(90deg, rgba(185, 226, 239, 1) , rgba(217, 184, 223, 1))",
+                                backgroundImage:
+                                    "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
                                 opacity: "0.7",
                             },
                         }}
