@@ -87,6 +87,20 @@ export async function getStaticProps() {
 }
 
 const list: React.FC = memo((data: any) => {
+    const allData = data
+    const designData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "design"
+    })
+    const siteData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "site"
+    })
+    const prototypeData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "prototype"
+    })
+    const frameworkData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "framework"
+    })
+
     return (
         <div css={contentsBase}>
             <AppBarArticle />
@@ -121,41 +135,22 @@ const list: React.FC = memo((data: any) => {
                                         m: 1,
                                     }}
                                 >
-                                    {data.cardWorks.map(
-                                        (cardWork: any, index: number) => {
+                                    {designData.map(
+                                        (dData: any, index: number) => {
                                             return (
-                                                <>
-                                                    {cardWork.category ===
-                                                    "design" ? (
-                                                        <Grid key={index}>
-                                                            <Cardbord
-                                                                title={
-                                                                    cardWork.title
-                                                                }
-                                                                img={
-                                                                    cardWork.img
-                                                                }
-                                                                overview={
-                                                                    cardWork.overview
-                                                                }
-                                                                date={
-                                                                    cardWork.date
-                                                                }
-                                                                skill={
-                                                                    cardWork.skill
-                                                                }
-                                                                url={
-                                                                    cardWork.url
-                                                                }
-                                                                git={
-                                                                    cardWork.git
-                                                                }
-                                                            />
-                                                        </Grid>
-                                                    ) : (
-                                                        ""
-                                                    )}
-                                                </>
+                                                <Grid key={index}>
+                                                    <Cardbord
+                                                        title={dData.title}
+                                                        img={dData.img}
+                                                        overview={
+                                                            dData.overview
+                                                        }
+                                                        date={dData.date}
+                                                        skill={dData.skill}
+                                                        url={dData.url}
+                                                        git={dData.git}
+                                                    />
+                                                </Grid>
                                             )
                                         }
                                     )}
@@ -173,41 +168,22 @@ const list: React.FC = memo((data: any) => {
                                         m: 1,
                                     }}
                                 >
-                                    {data.cardWorks.map(
-                                        (cardWork: any, index: number) => {
+                                    {siteData.map(
+                                        (sData: any, index: number) => {
                                             return (
-                                                <>
-                                                    {cardWork.category ===
-                                                    "site" ? (
-                                                        <Grid key={index}>
-                                                            <Cardbord
-                                                                title={
-                                                                    cardWork.title
-                                                                }
-                                                                img={
-                                                                    cardWork.img
-                                                                }
-                                                                overview={
-                                                                    cardWork.overview
-                                                                }
-                                                                date={
-                                                                    cardWork.date
-                                                                }
-                                                                skill={
-                                                                    cardWork.skill
-                                                                }
-                                                                url={
-                                                                    cardWork.url
-                                                                }
-                                                                git={
-                                                                    cardWork.git
-                                                                }
-                                                            />
-                                                        </Grid>
-                                                    ) : (
-                                                        ""
-                                                    )}
-                                                </>
+                                                <Grid key={index}>
+                                                    <Cardbord
+                                                        title={sData.title}
+                                                        img={sData.img}
+                                                        overview={
+                                                            sData.overview
+                                                        }
+                                                        date={sData.date}
+                                                        skill={sData.skill}
+                                                        url={sData.url}
+                                                        git={sData.git}
+                                                    />
+                                                </Grid>
                                             )
                                         }
                                     )}
@@ -225,42 +201,22 @@ const list: React.FC = memo((data: any) => {
                                         m: 1,
                                     }}
                                 >
-                                    {data.cardWorks.map(
-                                        (cardWork: any, index: number) => {
+                                    {prototypeData.map(
+                                        (pData: any, index: number) => {
                                             return (
-                                                <>
-                                                    {cardWork.category ===
-                                                    "prototype" ? (
-                                                        <Grid>
-                                                            <Cardbord
-                                                                key={index}
-                                                                title={
-                                                                    cardWork.title
-                                                                }
-                                                                img={
-                                                                    cardWork.img
-                                                                }
-                                                                overview={
-                                                                    cardWork.overview
-                                                                }
-                                                                date={
-                                                                    cardWork.date
-                                                                }
-                                                                skill={
-                                                                    cardWork.skill
-                                                                }
-                                                                url={
-                                                                    cardWork.url
-                                                                }
-                                                                git={
-                                                                    cardWork.git
-                                                                }
-                                                            />
-                                                        </Grid>
-                                                    ) : (
-                                                        ""
-                                                    )}
-                                                </>
+                                                <Grid key={index}>
+                                                    <Cardbord
+                                                        title={pData.title}
+                                                        img={pData.img}
+                                                        overview={
+                                                            pData.overview
+                                                        }
+                                                        date={pData.date}
+                                                        skill={pData.skill}
+                                                        url={pData.url}
+                                                        git={pData.git}
+                                                    />
+                                                </Grid>
                                             )
                                         }
                                     )}
@@ -278,42 +234,22 @@ const list: React.FC = memo((data: any) => {
                                         m: 1,
                                     }}
                                 >
-                                    {data.cardWorks.map(
-                                        (cardWork: any, index: number) => {
+                                    {frameworkData.map(
+                                        (fData: any, index: number) => {
                                             return (
-                                                <>
-                                                    {cardWork.category ===
-                                                    "framework" ? (
-                                                        <Grid>
-                                                            <Cardbord
-                                                                key={index}
-                                                                title={
-                                                                    cardWork.title
-                                                                }
-                                                                img={
-                                                                    cardWork.img
-                                                                }
-                                                                overview={
-                                                                    cardWork.overview
-                                                                }
-                                                                date={
-                                                                    cardWork.date
-                                                                }
-                                                                skill={
-                                                                    cardWork.skill
-                                                                }
-                                                                url={
-                                                                    cardWork.url
-                                                                }
-                                                                git={
-                                                                    cardWork.git
-                                                                }
-                                                            />
-                                                        </Grid>
-                                                    ) : (
-                                                        ""
-                                                    )}
-                                                </>
+                                                <Grid key={index}>
+                                                    <Cardbord
+                                                        title={fData.title}
+                                                        img={fData.img}
+                                                        overview={
+                                                            fData.overview
+                                                        }
+                                                        date={fData.date}
+                                                        skill={fData.skill}
+                                                        url={fData.url}
+                                                        git={fData.git}
+                                                    />
+                                                </Grid>
                                             )
                                         }
                                     )}
@@ -324,7 +260,7 @@ const list: React.FC = memo((data: any) => {
                 </Grid>
             </Box>
             <FooterArticle />
-            <ScrollToTop />
+            {/* <ScrollToTop /> */}
         </div>
     )
 })
