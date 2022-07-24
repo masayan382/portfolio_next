@@ -1,15 +1,15 @@
-import * as React from "react"
-import { RenderPageResult } from "next/dist/shared/lib/utils"
+import * as React from 'react'
+import { RenderPageResult } from 'next/dist/shared/lib/utils'
 import Document, {
     Html,
     Head,
     Main,
     NextScript,
     DocumentInitialProps,
-} from "next/document"
-import createEmotionServer from "@emotion/server/create-instance"
-import createEmotionCache from "../src/createEmotionCache"
-import theme from "../src/theme"
+} from 'next/document'
+import createEmotionServer from '@emotion/server/create-instance'
+import createEmotionCache from '../src/createEmotionCache'
+import theme from '../src/theme'
 
 export default class MyDocument extends Document {
     render(): JSX.Element {
@@ -17,10 +17,10 @@ export default class MyDocument extends Document {
             <Html lang="ja">
                 <Head>
                     {/* <title>Portfolio</title> */}
-                    <meta
+                    {/* <meta
                         name="viewport"
                         content="initial-scale=1, width=device-width"
-                    />
+                    /> */}
                     <meta name="Portfolio" content="made by T.M" />
                     <link rel="icon" href="/favicon.png" />
                     <meta
@@ -70,7 +70,7 @@ MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
     const emotionStyles = extractCriticalToChunks(initialProps.html)
     const emotionStyleTags = emotionStyles.styles.map((style) => (
         <style
-            data-emotion={`${style.key} ${style.ids.join(" ")}`}
+            data-emotion={`${style.key} ${style.ids.join(' ')}`}
             key={style.key}
             dangerouslySetInnerHTML={{ __html: style.css }}
         />
