@@ -64,7 +64,7 @@ const Lamall: React.FC = () => {
                                 <th>概要</th>
                                 <td>
                                     Laravel8 ✕
-                                    MySQLで作製したECサイト。管理者、オーナー、ユーザーのマルチログインシステム実装。決済方法はStripeを採用。
+                                    MySQLで作製したECサイト。管理者、オーナー、ユーザーのマルチログインシステム。決済方法はStripeを採用。
                                 </td>
                             </tr>
                             <tr>

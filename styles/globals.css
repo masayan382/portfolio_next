@@ -254,7 +254,7 @@ h2 {
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%); */
     overflow: auto;
     max-width: 345px;
-    height: 440px;
+    height: 445px;
 }
 main .worksPage .swiper {
     position: relative;
@@ -273,7 +273,7 @@ main .worksPage .swiper {
     /* pointer-events: auto !important; */
     display: flex;
     justify-content: center;
-    height: 440px;
+    height: 445px;
 }
 
 /* .swiper-slide.swiper-slide-visible.swiper-slide-active
