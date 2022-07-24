@@ -12,17 +12,17 @@ import Link from "next/link"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "4px 6px",
-        color: "rgb(33, 150, 243)",
-        textDecoration: "none",
-        display: "flex",
+        padding: "4px 6px !important",
+        color: "rgb(33, 150, 243)  !important",
+        textDecoration: "none  !important",
+        display: "flex  !important",
         "&:hover": {
-            backgroundColor: "rgba(33, 150, 243, 0.06)",
-            borderRadius: "4px",
-            textDecoration: "none",
+            backgroundColor: "rgba(33, 150, 243, 0.06)  !important",
+            borderRadius: "4px  !important",
+            textDecoration: "none  !important",
         },
         Link: {
-            underline: "none",
+            underline: "none  !important",
         },
     },
 }))
