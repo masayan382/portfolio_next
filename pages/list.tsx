@@ -4,14 +4,16 @@ import Grid from "@mui/material/Grid"
 import { css } from "@mui/styled-engine"
 import AppBarArticle from "../components/AppBarArticle"
 import FooterArticle from "../components/FooterArticle"
-import ScrollToTop from "../components/ScrollToTop"
-import Image from "next/image"
 import { mq } from "../slides/css"
 import Cardbord from "../components/Cardbord"
+import React, { memo } from "react"
+import cardWorks from "../data/data"
+import ReturnTopButton from "../components/ReturnTopButton"
+import Head from "next/head"
 
 const contentsBase = css({
     backgroundImage:
-        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+        "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
     width: "100%",
     height: "100%",
     color: "#333",
@@ -32,8 +34,8 @@ const contentsBase = css({
                     bottom: "-16%",
                     width: "100%",
                     height: "6px",
-                    background:
-                        "linear-gradient(135deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
+                    backgroundImage:
+                        "linear-gradient(120deg, rgba(169, 201, 255, 1), rgba(251, 187, 236, 1))",
                 },
                 [mq[2]]: {
                     left: "-2%",
@@ -51,51 +53,223 @@ const paperArea = css({
         letterSpacing: "0.05em",
     },
     [mq[2]]: {
-        padding: "24px 40px 64px",
+        padding: "24px 24px 64px",
     },
 })
 
 const imgBox = css({ filter: "drop-shadow(0px 0px 16px rgba(0,0,0,0.6))" })
 
-const list = () => {
+type cardData = {
+    id: string
+    category: string
+    title: string
+    img: string
+    overview: string
+    date: string
+    skill: string
+    url?: string
+    git?: string
+}
+
+type cardList = {
+    cards: cardData[]
+}
+
+export async function getStaticProps() {
+    // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+    // const res = await fetch("/data.json")
+    // const allData = await res.json()
+    return {
+        props: {
+            cardWorks,
+        },
+    }
+}
+
+const list: React.FC = (data: any) => {
+    const allData = data
+    const designData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "design"
+    })
+    const siteData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "site"
+    })
+    const prototypeData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "prototype"
+    })
+    const frameworkData = allData.cardWorks.filter(function (data: any) {
+        return data.category == "framework"
+    })
     return (
-        <div css={contentsBase}>
-            <AppBarArticle />
-            <Box
-                sx={{
-                    flexGrow: 1,
-                    margin: "40px auto 0 auto",
-                    paddingBottom: 12,
-                    maxWidth: "1280px",
-                }}
-            >
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    textAlign="center"
+        <>
+            <Head>
+                <title>Portfolio</title>
+                <meta
+                    name="Portfolio"
+                    content="T·MのPortfolioサイトのWORKS LISTです"
+                />
+            </Head>
+            <div css={contentsBase}>
+                <AppBarArticle />
+                <Box
+                    sx={{
+                        flexGrow: 1,
+                        margin: "40px auto 0 auto",
+                        paddingBottom: 12,
+                        maxWidth: "1360px",
+                    }}
                 >
-                    <Grid item xs={10}>
-                        <Paper elevation={3} css={paperArea}>
-                            <h2 id="title" style={{ textAlign: "center" }}>
-                                <span>WORKS LIST</span>
-                            </h2>
-                            <h3>DESIGN</h3>
-                            <Cardbord />
-                            <h3>WEB SITE</h3>
-                            <Cardbord />
-                            <h3>PROTOTYPE</h3>
-                            <Cardbord />
-                            <h3>FRAMEWORK</h3>
-                            <Cardbord />
-                        </Paper>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        textAlign="center"
+                    >
+                        <Grid item xs={12}>
+                            <Paper elevation={0} css={paperArea}>
+                                <h2 id="title" style={{ textAlign: "center" }}>
+                                    <span>WORKS LIST</span>
+                                </h2>
+                                <section>
+                                    <h3>DESIGN</h3>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            justifyContent: "space-around",
+                                            p: 1,
+                                            m: 1,
+                                        }}
+                                    >
+                                        {designData.map(
+                                            (dData: any, index: number) => {
+                                                return (
+                                                    <Grid key={index}>
+                                                        <Cardbord
+                                                            title={dData.title}
+                                                            img={dData.img}
+                                                            overview={
+                                                                dData.overview
+                                                            }
+                                                            date={dData.date}
+                                                            skill={dData.skill}
+                                                            url={dData.url}
+                                                            git={dData.git}
+                                                        />
+                                                    </Grid>
+                                                )
+                                            }
+                                        )}
+                                    </Box>
+                                </section>
+
+                                <section>
+                                    <h3>WEB SITE</h3>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            justifyContent: "space-around",
+                                            p: 1,
+                                            m: 1,
+                                        }}
+                                    >
+                                        {siteData.map(
+                                            (sData: any, index: number) => {
+                                                return (
+                                                    <Grid key={index}>
+                                                        <Cardbord
+                                                            title={sData.title}
+                                                            img={sData.img}
+                                                            overview={
+                                                                sData.overview
+                                                            }
+                                                            date={sData.date}
+                                                            skill={sData.skill}
+                                                            url={sData.url}
+                                                            git={sData.git}
+                                                        />
+                                                    </Grid>
+                                                )
+                                            }
+                                        )}
+                                    </Box>
+                                </section>
+
+                                <section>
+                                    <h3>PROTOTYPE</h3>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            justifyContent: "space-around",
+                                            p: 1,
+                                            m: 1,
+                                        }}
+                                    >
+                                        {prototypeData.map(
+                                            (pData: any, index: number) => {
+                                                return (
+                                                    <Grid key={index}>
+                                                        <Cardbord
+                                                            title={pData.title}
+                                                            img={pData.img}
+                                                            overview={
+                                                                pData.overview
+                                                            }
+                                                            date={pData.date}
+                                                            skill={pData.skill}
+                                                            url={pData.url}
+                                                            git={pData.git}
+                                                        />
+                                                    </Grid>
+                                                )
+                                            }
+                                        )}
+                                    </Box>
+                                </section>
+
+                                <section>
+                                    <h3>FRAMEWORK</h3>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            justifyContent: "space-around",
+                                            p: 1,
+                                            m: 1,
+                                        }}
+                                    >
+                                        {frameworkData.map(
+                                            (fData: any, index: number) => {
+                                                return (
+                                                    <Grid key={index}>
+                                                        <Cardbord
+                                                            title={fData.title}
+                                                            img={fData.img}
+                                                            overview={
+                                                                fData.overview
+                                                            }
+                                                            date={fData.date}
+                                                            skill={fData.skill}
+                                                            url={fData.url}
+                                                            git={fData.git}
+                                                        />
+                                                    </Grid>
+                                                )
+                                            }
+                                        )}
+                                    </Box>
+                                </section>
+                            </Paper>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Box>
-            <FooterArticle />
-            <ScrollToTop />
-        </div>
+                    <ReturnTopButton />
+                </Box>
+                <FooterArticle />
+            </div>
+        </>
     )
 }
 

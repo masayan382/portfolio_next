@@ -4,13 +4,11 @@ import CardHeader from "@mui/material/CardHeader"
 import CardMedia from "@mui/material/CardMedia"
 import CardContent from "@mui/material/CardContent"
 import CardActions from "@mui/material/CardActions"
-import IconButton from "@mui/material/IconButton"
-import WebIcon from "@mui/icons-material/Web"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import Tooltip from "@mui/material/Tooltip"
-import Link from "@mui/material/Link"
 import Box from "@mui/material/Box"
 import { css } from "@mui/styled-engine"
+import Button from "@mui/material/Button"
+import { makeStyles } from "@material-ui/core"
+import Link from "next/link"
 
 const cardTable = css({
     width: "100%",
@@ -29,7 +27,25 @@ const cardTable = css({
     },
 })
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: "4px 6px",
+        color: "rgb(33, 150, 243)",
+        textDecoration: "none",
+        display: "flex",
+        "&:hover": {
+            backgroundColor: "rgba(33, 150, 243, 0.06)",
+            borderRadius: "4px",
+            textDecoration: "none",
+        },
+        Link: {
+            underline: "none",
+        },
+    },
+}))
+
 const Monoqlo: React.FC = () => {
+    const classes = useStyles()
     return (
         <Box sx={{ boxShadow: 5 }}>
             <Card sx={{ maxWidth: 345 }}>
@@ -58,36 +74,42 @@ const Monoqlo: React.FC = () => {
                             <tr>
                                 <th>使用技術</th>
                                 <td>
-                                    React.js、React
-                                    redux、React、Hooks、Material-UI、Firebase
+                                    React.js、React-redux、React-Hooks、Material-UI、Firebase
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </CardContent>
-                <CardActions disableSpacing>
-                    <Tooltip title="WEBサイトへ" placement="top">
-                        <Link
-                            href="https://masataka.site/monoqlo/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconButton aria-label="site">
-                                <WebIcon />
-                            </IconButton>
-                        </Link>
-                    </Tooltip>
-                    <Tooltip title="Githubへ" placement="top">
-                        <Link
-                            href="https://github.com/masayan382/ec-app"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconButton aria-label="github">
-                                <GitHubIcon />
-                            </IconButton>
-                        </Link>
-                    </Tooltip>
+                <CardActions
+                    style={{
+                        padding: "0px 14px 8px 14px",
+                    }}
+                >
+                    <Link
+                        href="https://masataka.site/monoqlo/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={classes.root}
+                    >
+                        <Button size="large" className={classes.root}>
+                            <a
+                                style={{
+                                    background: "none",
+                                }}
+                            >
+                                WEBページへ
+                            </a>
+                        </Button>
+                    </Link>
+                    <Link
+                        href="https://github.com/masayan382/ec-app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Button size="large" className={classes.root}>
+                            <a>Githubへ</a>
+                        </Button>
+                    </Link>
                 </CardActions>
             </Card>
         </Box>

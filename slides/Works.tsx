@@ -1,8 +1,6 @@
-import React from "react"
-import Image from "next/image"
+import React, { memo } from "react"
 import { css } from "@mui/styled-engine"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
-import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import {
     Barman,
@@ -20,9 +18,8 @@ import {
     Lamall,
     TodoNext,
 } from "../components/workSlides/index"
-import { Swiper, SwiperSlide } from "swiper/react" //カルーセル用のタグをインポート
-import { SwiperOptions } from "swiper"
-import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper" //使いたい機能をインポート
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper"
 import "swiper/css"
 import "swiper/css/autoplay"
 import "swiper/css/navigation"
@@ -40,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const bottomBg = css({
     backgroundImage:
-        "linear-gradient(90deg, rgba(247, 93, 139, 1) 55%, rgba(254, 220, 64, 1))",
+        "linear-gradient(120deg, rgba(169, 201, 255, 1) 55%, rgba(251, 187, 236, 1) 98%)",
     height: "100vh",
     width: "100vw",
     backgroundRepeat: "no-repeat",
@@ -62,7 +59,6 @@ const sliderContainer = css({
     },
     width: "calc(100%-96px)",
     height: "100%",
-    // padding: "98px 80px 56px 96px",
     margin: "0",
     color: "#fff",
     [mq[0]]: {
@@ -150,10 +146,10 @@ const Works: React.FC = () => {
                                 <Swiper
                                     modules={[Pagination, Navigation]}
                                     spaceBetween={24}
-                                    // autoplay={{
-                                    //     delay: 3000,
-                                    //     disableOnInteraction: true,
-                                    // }}
+                                    autoplay={{
+                                        delay: 4000,
+                                        disableOnInteraction: true,
+                                    }}
                                     navigation={true}
                                     pagination={{ clickable: true }}
                                     loop={true}

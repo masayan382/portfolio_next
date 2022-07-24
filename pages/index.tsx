@@ -11,6 +11,10 @@ const contentArea = css({
 const Home: NextPage = () => {
     return (
         <div css={contentArea}>
+            <Head>
+                <title>Portfolio</title>
+                <meta name="Portfolio" content="T·MのPortfolioサイトです" />
+            </Head>
             <Header />
             <main>
                 <Slider />
