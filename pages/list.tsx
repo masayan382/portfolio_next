@@ -18,6 +18,7 @@ const contentsBase = css({
     height: "100%",
     color: "#333",
     h2: {
+        fontSize: "32px",
         " span": {
             position: "relative",
             [mq[0]]: {
@@ -41,6 +42,32 @@ const contentsBase = css({
                     left: "-2%",
                     width: "108%",
                 },
+            },
+        },
+    },
+    h3: {
+        fontSize: "24px",
+        margin: "32px auto 24px",
+        textAlign: "center",
+        " span": {
+            display: "inline-block",
+            padding: "0 55px",
+            position: "relative",
+            "&:before,&:after": {
+                content: "''",
+                position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
+                display: "inline-block",
+                width: "45px",
+                height: "2px",
+                backgroundColor: "black",
+            },
+            "&:before": {
+                left: "0",
+            },
+            "&:after": {
+                right: "0",
             },
         },
     },
@@ -131,8 +158,11 @@ const list: React.FC = (data: any) => {
                                 <h2 id="title" style={{ textAlign: "center" }}>
                                     <span>WORKS LIST</span>
                                 </h2>
+
                                 <section>
-                                    <h3>DESIGN</h3>
+                                    <h3>
+                                        <span>DESIGN</span>
+                                    </h3>
                                     <Box
                                         sx={{
                                             display: "flex",
@@ -165,7 +195,9 @@ const list: React.FC = (data: any) => {
                                 </section>
 
                                 <section>
-                                    <h3>WEB SITE</h3>
+                                    <h3>
+                                        <span>WEB SITE</span>
+                                    </h3>
                                     <Box
                                         sx={{
                                             display: "flex",
@@ -198,7 +230,9 @@ const list: React.FC = (data: any) => {
                                 </section>
 
                                 <section>
-                                    <h3>PROTOTYPE</h3>
+                                    <h3>
+                                        <span>PROTOTYPE</span>
+                                    </h3>
                                     <Box
                                         sx={{
                                             display: "flex",
@@ -231,7 +265,9 @@ const list: React.FC = (data: any) => {
                                 </section>
 
                                 <section>
-                                    <h3>FRAMEWORK</h3>
+                                    <h3>
+                                        <span>FRAMEWORK</span>
+                                    </h3>
                                     <Box
                                         sx={{
                                             display: "flex",
