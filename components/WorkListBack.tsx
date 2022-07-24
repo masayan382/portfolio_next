@@ -33,7 +33,7 @@ const WorkListBack = () => {
         <Grid>
             <div css={listBtn}>
                 <Link href="/list">
-                    <a>WORK LISTへ戻る</a>
+                    <a>WORKS LISTへ戻る</a>
                 </Link>
             </div>
         </Grid>

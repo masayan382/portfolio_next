@@ -10,6 +10,7 @@ import Document, {
 import createEmotionServer from "@emotion/server/create-instance"
 import createEmotionCache from "../src/createEmotionCache"
 import theme from "../src/theme"
+import { ServerStyleSheets } from "@material-ui/core/styles"
 
 export default class MyDocument extends Document {
     render(): JSX.Element {
@@ -48,6 +49,7 @@ export default class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
+    const sheets = new ServerStyleSheets()
     const originalRenderPage = ctx.renderPage
     const cache = createEmotionCache()
     const { extractCriticalToChunks } = createEmotionServer(cache)
@@ -56,6 +58,7 @@ MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
         originalRenderPage({
             enhanceApp:
                 (App: any) =>
+                // eslint-disable-next-line react/display-name
                 (props): JSX.Element =>
                     <App emotionCache={cache} {...props} />,
         })
@@ -66,11 +69,13 @@ MyDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
         <style
             data-emotion={`${style.key} ${style.ids.join(" ")}`}
             key={style.key}
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: style.css }}
         />
     ))
     return {
         ...initialProps,
+        // Styles fragment is rendered after the app and page rendering finish.
         styles: [
             ...React.Children.toArray(initialProps.styles),
             ...emotionStyleTags,
