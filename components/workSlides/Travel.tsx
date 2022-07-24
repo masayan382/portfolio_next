@@ -53,7 +53,7 @@ const Travel: React.FC = () => {
                 <CardMedia
                     component="img"
                     height="194"
-                    image="/work/travel.png"
+                    image="/work/travel.gif"
                     alt="Travel"
                 />
                 <CardContent style={{ padding: "4px 16px" }}>

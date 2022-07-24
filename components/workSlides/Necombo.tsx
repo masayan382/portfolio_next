@@ -53,7 +53,7 @@ const Necombo: React.FC = () => {
                 <CardMedia
                     component="img"
                     height="194"
-                    image="/work/necombo.png"
+                    image="/work/necombo.gif"
                     alt="Necombo"
                 />
                 <CardContent style={{ padding: "4px 16px" }}>
