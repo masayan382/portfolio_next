@@ -1,8 +1,6 @@
 import React from "react"
-import Image from "next/image"
 import { css, keyframes } from "@mui/styled-engine"
 import ParticlesBackground from "../components/ParticlesBackground"
-import { stepClasses } from "@mui/material"
 
 const topContent = css({
     position: "absolute",
