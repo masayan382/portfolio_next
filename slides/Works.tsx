@@ -128,7 +128,7 @@ const listBtn = css({
 
 SwiperCore.use([Pagination, Autoplay, Navigation])
 
-const Works: React.FC = memo(() => {
+const Works: React.FC = () => {
     const classes = useStyles()
     return (
         <div css={bottomBg}>
@@ -240,6 +240,6 @@ const Works: React.FC = memo(() => {
             </div>
         </div>
     )
-})
+}
 
 export default Works

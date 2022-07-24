@@ -36,12 +36,6 @@ function MyApp(props: MyAppProps) {
             {show_screen ? (
                 <>
                     <CacheProvider value={emotionCache}>
-                        <Head>
-                            <meta
-                                name="viewport"
-                                content="initial-scale=1, width=device-width"
-                            />
-                        </Head>
                         <ThemeProvider theme={theme}>
                             <CssBaseline />
                             <Component {...pageProps} />

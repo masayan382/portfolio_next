@@ -16,8 +16,11 @@ export default class MyDocument extends Document {
         return (
             <Html lang="ja">
                 <Head>
-                    {/* PWA primary color */}
-                    <title>Portfolio</title>
+                    {/* <title>Portfolio</title> */}
+                    <meta
+                        name="viewport"
+                        content="initial-scale=1, width=device-width"
+                    />
                     <meta name="Portfolio" content="made by T.M" />
                     <link rel="icon" href="/favicon.png" />
                     <meta
