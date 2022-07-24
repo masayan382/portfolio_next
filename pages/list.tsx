@@ -19,6 +19,7 @@ const contentsBase = css({
     color: "#333",
     h2: {
         fontSize: "32px",
+        marginBottom: "68px",
         " span": {
             position: "relative",
             [mq[0]]: {
@@ -59,15 +60,15 @@ const contentsBase = css({
                 top: "50%",
                 transform: "translateY(-50%)",
                 display: "inline-block",
-                width: "45px",
+                width: "56px",
                 height: "2px",
-                backgroundColor: "black",
+                backgroundColor: "#212121",
             },
             "&:before": {
-                left: "0",
+                left: "-16px",
             },
             "&:after": {
-                right: "0",
+                right: "-16px",
             },
         },
     },
